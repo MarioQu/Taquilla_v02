@@ -1,0 +1,440 @@
+.border{
+    border: 1px dashed #00ffff !important;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+    background-color: #FAFBFD;
+}
+a{
+    text-decoration: none !important;
+}
+.grayborder{
+    border: 1px solid #B5BAC7;
+}
+
+
+/* ---------- Colores ---------- */
+:root{
+    --white:        #ffffff;
+    --black:        #000000;
+    --red:          #DA291C;
+    --purple:       #5F2167;
+    --purple2:      #E4DAE6;
+    --gray1:        #808391;
+    --gray2:        #F6F7FB;
+    --gray3:        #F4F6F9;
+    --grayf1:       #F1F3F9;
+    --dark1:        #1D1F24;
+    --green:        #258910;
+    --green2:       #169A8E;
+    --green3:       #E7F7E4;
+}
+
+
+/* ---------- Tipografía ---------- */
+.titles18{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+}
+.titles24{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+}
+.titles32{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+}
+.titles40{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+}
+.txt12{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+.txt14{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+.txt16{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+.txt18{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+.txt20{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+.txt24{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+}
+.txt32{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 36px;
+}
+
+.fwhite{
+    color: var(--white);
+}
+.fblack{
+    color: var(--black);
+}
+.fred{
+    color: var(--red);
+}
+.fdark1{
+   color: var(--dark1); 
+}
+.fgreen{
+    color: var(--green)
+}
+.fgreen2{
+    color: var(--green2)
+}
+.fpurple{
+    color: var(--purple);
+}
+
+.blackback{
+    background-color: var(--black);
+}
+.whiteback{
+    background-color: var(--white);
+}
+.grayf1back{
+    background-color: var(--grayf1);
+}
+.gray2back{
+    background-color: var(--gray2)
+}
+.gray3back{
+    background-color: var(--gray3);
+}
+.green3back{
+    background-color: var(--green3);
+    border-bottom: 1px solid var(--green);
+}
+.purpleback{
+    background-color: var(--purple2);
+    border: 1px solid var(--purple);
+}
+.redback{
+    background-color: var(--red);
+}
+
+.f400{
+    font-weight: 400;
+}
+.f700{
+    font-weight: 700;
+}
+
+/* ---------- Botones ---------- */
+.btn-lang{
+    width: 190px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-purple{
+    background-color: var(--purple);
+    border: 1px solid var(--purple);
+    color: var(--white);
+}.btn-purple:hover{
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15);
+    background-color: var(--white);
+    color: var(--purple);
+}
+
+.btn-white{
+    background-color: var(--white);
+    border: 1px solid var(--purple);
+    color: var(--purple);
+}.btn-white:hover{
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15);
+    background-color: var(--purple);
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+
+.btn-gray{
+    background-color: #E3E7F2;
+    border: 1px solid #E3E7F2;
+    color: #474A56;
+}.btn-gray:hover{
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15);
+    background-color: var(--white);
+    border: 1px solid var(--purple);
+    color: var(--purple);
+}
+
+.btn-green{
+    background-color: var(--green);
+    border: 1px solid var(--green);
+    color: var(--white);
+}.btn-green:hover{
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15);
+    background-color: var(--white);
+    border: 1px solid var(--green);
+    color: var(--green);
+}
+
+
+/* **************************************  
+                Home 
+************************************** */
+#back-img-header{
+    background-color: var(--red);
+    position: absolute;
+    z-index: -1;
+    height: 600px;
+    width: 100%;
+    left: 0;
+    top: 0;
+}    
+.ida_regreso .custom-radio{
+    width: 50%;
+    text-align: center;
+}
+.ida_regreso label{
+    font-weight: 500;
+    color: #959DB6;
+}
+.ida_regreso .custom-radio .custom-control-label::before {
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.ida_regreso .custom-radio .custom-control-input:checked~.custom-control-label::after {
+    background-image: url("");
+}
+.ida_regreso .custom-control-label::before {
+    position: absolute;
+    top: .0;
+    left: 0;
+    display: block;
+    width: 100% !important;
+    border: none;
+}
+.custom-control-input:not(:disabled):active~.custom-control-label::before {
+    color: #fff;
+    background-color: var(--purple) !important;
+    border-color: var(--purple) !important;
+}
+#form-origen-destino .form-control{
+    height: 50px;
+    color: #6F7587;
+    font-weight: 500;
+}
+.form-control.fblack::placeholder{
+    color: #000 !important;
+}
+
+
+.mb-lg{
+    margin-bottom: 200px;
+}
+.colcards{
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: 24px;
+}
+.banner_anuncio .img-abs{
+    position: absolute;
+    bottom: 0;
+}.banner_anuncio .img-abs2{
+    position: absolute;
+    bottom: -10px;
+    right: -40px;
+}
+/* #modalViajantes .modal-dialog-centered .modal-dialog, 
+#modalViajantes .modal-dialog-centered.modal-dialog {
+    align-items: flex-end !important;
+} */
+#modalViajantes .modal-content{
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+}
+#modalViajantes .icon-viajeros{
+    width: 50px;
+}
+#modalViajantes .btn-cant{
+    border: 2px solid #ECEFF6;
+    border-radius: 7px;
+    box-shadow: none !important;
+    color: #959BA8;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+}
+
+#dec_ad,
+#dec_ni,
+#dec_ina,
+#dec_est,
+#dec_mae{
+    background-image: url('../images/menos.png'); 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-size: 80%;
+}
+#inc_ad,
+#inc_ni,
+#inc_ina,
+#inc_est,
+#inc_mae{
+    background-image: url('../images/mas.png'); 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-size: 70%;
+}
+
+#modalViajantes .form-control{
+    width: 70px;
+    text-align: center;
+    border: none !important;
+    box-shadow: none !important;
+}
+#modalViajantes .modal-footer .row,
+#modalViajantes .modal-footer .btn{
+    width: 100%;
+}
+#modalViajantes .form-control:disabled, 
+#modalViajantes .form-control[readonly] {
+    background-color: var(--white);
+}
+
+
+/* **************************************  
+            Pantalla corridas 
+************************************** */
+#estatus_corrida{
+    border-bottom: 2px solid #B5BAC7;
+    background-color: #ECEFF6;
+}
+.containerlg-trayecto{
+    background-color: #F4F6F9;
+}
+.containerlg-trayecto .container-lg{
+    background-color: #fff;
+}
+#corridas{
+    height: 770px;
+    overflow-y: scroll;
+}
+#corridas{
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+#corridas::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+#corridas .borders{
+    background-image: url("../images/line-border.png"), url("../images/line-border.png");
+    background-size: 1px 60%, 1px 60%;
+    background-repeat: no-repeat;
+    background-position: left center, right center;
+}
+
+@media(max-width: 992px){
+    #estatus_corrida .separador{
+        width: 30px;                
+    }
+}
+@media(max-width: 767px){
+    #corridas .borders{
+        background: none !important;
+    }
+}
+#estatus_corrida .borderleft{
+    background-image: url("../images/line-border.png");
+    background-size: 1px 100%;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+    color: var(--purple);
+    border-color: var(--purple);
+    background-color: var(--purple);
+}
+.bullets-asientos{
+    width: 15px; 
+    height: 15px;                  
+    border-radius: 50%;
+}
+.bullets-asientos.disp{
+    border: 1px solid #B5BAC7;
+    background-color: transparent;
+}
+.bullets-asientos.nodisp{
+    border: 1px solid #B5BAC7;
+    background-color: #848CA2;
+}
+.bullets-asientos.select{
+    background-color: var(--purple);
+    border: 1px solid #B5BAC7;
+}
+#registro_pasajeros a:hover,
+#modalAsistencia a:hover{
+    color: var(--dark1)
+}
+#registro_pasajeros .custom-checkbox .custom-control-label::before {
+    top: -0.10rem;
+    left: -1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+#registro_pasajeros .custom-control-label::after {
+    top: -0.3rem;
+    left: -1.7rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+/* **************************************  
+            Pantalla Pago 
+************************************** */
+@media(min-width: 768px) and (orientation: portrait){
+    #footer-pago{
+        position: fixed;
+        bottom: 0;
+    }
+}
+@media(min-width: 992px) and (orientation: landscape){
+    #footer-pago{
+        position: fixed;
+        bottom: 0;
+    }
+}
+
+
+/* **************************************  
+            Pantalla final 
+************************************** */
+#sigue_tu_viaje{
+    background-image: url("../images/seguir-mi-viajeOK.png");
+    background-position: bottom left;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
