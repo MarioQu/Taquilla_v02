@@ -9,20 +9,31 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
         <title>Taquilla reversible</title>
     </head>
     
     <body>
-        <section class="container-fluid py-3 sticky-top" id="estatus_corrida">
+        <div class="d-flex align-items-center justify-content-center flex-column" style="position: fixed; left: 0; right: 0; top: 0; bottom: 0; width: 100%; height: 100%; z-index: 9999; background-color: rgba(255, 255, 255, .7);">
+            <img src="assets/images/ado-rounded.png" class="img-fluid" alt="">
+            <strong>Buscando boletos de regreso...</strong>
+        </div>
+        
+        
+        <section class="container-fluid py-3 sticky-top" id="estatus_corrida" style="filter: blur(5px);">
             <div class="container-lg">
                 <div class="row">
-                    <div class="col-12 col-lg-12 d-flex align-items-center justify-content-center">
-                        <img src="assets/images/corrida-off.png" class="img-fluid mr-2" alt="">
+                    <div class="col-12 col-lg-12 d-flex align-items-center justify-content-between">
+                        <button class="btn btn-white py-1 titles24 shadow-none d-flex align-items-center justify-content-center mr-3">
+                            <iconify-icon icon="ant-design:left-outlined"></iconify-icon> Regresar
+                        </button>
+                        
+                        <img src="assets/images/corrida-on.png" class="img-fluid mr-2" alt="">
                         <span class="txt14">Elegir corrida</span>
                         
                         <img src="assets/images/separador.png" class="separador img-fluid mx-2 mx-sm-2 mx-md-2 my-2 my-sm-2 my-md-0 my-lg-0" alt="">
                         
-                        <img src="assets/images/asientos-on.png" class="img-fluid mr-2" alt="">
+                        <img src="assets/images/asientos-off.png" class="img-fluid mr-2" alt="">
                         <span class="txt14 text-muted2">Asientos y datos</span>
                         
                         <img src="assets/images/separador.png" class="separador img-fluid mx-2 mx-sm-2 mx-md-2 mx-2 my-2 my-sm-2 my-md-0 my-lg-0" alt="">
@@ -35,7 +46,7 @@
         </section>
         
         <!-- Trayecto -->
-        <section class="container-fluid containerlg-trayecto py-4">
+        <section class="container-fluid containerlg-trayecto py-4" style="filter: blur(5px);">
             <div class="container-lg rounded-lg">
                 <div class="row p-2">
                     <div class="col-2 col-lg-1">
@@ -44,15 +55,15 @@
                     <div class="col-10 col-lg-11 pl-0">
                         <div class="row">
                             <div class="col-lg-12" data-aos="fade-left" data-aos-duration="1500">
-                                <h5 class="titles24">México, TAPO</h5>
+                                <h5 class="titles24">Central México Norte, CDMX</h5>
                                 <span class="text18">Terminal origen</span>
-                                <span class="float-right titles24">12:00hrs</span>
+                                <!-- <span class="float-right titles24">12:00hrs</span> -->
                                 <hr>
                             </div>
                             <div class="col-lg-12" data-aos="fade-right" data-aos-duration="1900">
-                                <h5 class="titles24">Puebla, CAPU</h5>
+                                <h5 class="titles24">Costa Esmeralda, Ver.</h5>
                                 <span class="text18">Terminal destino</span>
-                                <span class="float-right titles24">14:30hrs</span>
+                                <!-- <span class="float-right titles24">14:30hrs</span> -->
                                 <hr>
                             </div>                           
                         </div>
@@ -60,154 +71,35 @@
                 </div>
             </div>
         </section>
-        
-        
+
         <!-- Boletos/Fecha -->
-        <section class="container-fluid py-4 whiteback">
+        <section class="container-fluid py-4 whiteback" style="filter: blur(5px);">
             <div class="container-lg">
                 <div class="row">
-                    <div class="col-12 col-sm-12  col-lg-4 d-flex align-items-center justify-content-center" data-aos="fade-down" data-aos-duration="1400">
-                        <span class="fblack titles32">1 Adulto</span>
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 d-flex align-items-center justify-content-center text-center px-0" data-aos="fade-down" data-aos-duration="1700">
-                        <span class="fblack titles24">Hoy - Vier. 30 de ago. 21:31h</span>
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 d-flex align-items-center justify-content-center" data-aos="fade-down" data-aos-duration="2000">
-                        <span class="titles32 fgreen">$1,200.00MXN</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        
-        <!-- Asientos -->
-        <section class="container-fluid">
-            <div class="container-lg whiteback my-5 shadow rounded-lg p-5">
-                <div class="row">
-                    <div class="col-12">
-                        <h5 class="titles24 text-left dblack">Elige tu(s) asiento(s) de ida</h5>
+                    <div class="col-lg-12 d-flex align-items-center justify-content-start" data-aos="zoom-in" data-aos-duration="1900">
+                        <button class="btn btn-purple py-1 titles24 shadow-none mr-3 text-uppercase">
+                            Elije tu(s) boleto(s) de ida
+                        </button>
+                        <p class="fblack titles24 m-0 p-0">Hoy - Vier. 30 de ago. 21:31 h</p>                         
                     </div>
                     
-                    <div class="col-12 py-3">
-                        <div class="d-flex align-items-center justify-content-start">
-                            <div class="d-flex align-items-center justify-content-start flex-column flex-sm-row flex-md-row flex-lg-row mr-4" data-aos="fade-down" data-aos-duration="1400">
-                                <div class="bullets-asientos disp mr-2"></div> Disponible
-                            </div>
-                            <div class="d-flex align-items-center justify-content-start flex-column flex-sm-row flex-md-row flex-lg-row mr-4" data-aos="fade-up" data-aos-duration="1700">
-                                <div class="bullets-asientos nodisp mr-2"></div> No disponible
-                            </div>
-                            <div class="d-flex align-items-center justify-content-start flex-column flex-sm-row flex-md-row flex-lg-row" data-aos="fade-down" data-aos-duration="2000">
-                                <div class="bullets-asientos select mr-2"></div> Seleccionado
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-12 text-center">
-                        <img src="assets/images/asientos.png" class="img-fluid w-100" alt="">
+                    <div class="col-lg-12 text-left mt-3" data-aos="zoom-in" data-aos-duration="1900">
+                        <span class="fblack txt18">3 adultos, 2 niños, 1 INAPAM</span>                                                                       
                     </div>
                 </div>
             </div>
         </section>
 
-        
-        <!-- Registro Pasajeros -->
-        <section class="container-fluid mb-5">            
-            <div class="container-lg" id="registro_pasajeros">
-                <h5 class="fblack titles24 my-5">Registra a tu(s) pasajero(s)</h5>
-                <div class="row gray2back shadow p-5 rounded-lg">
-                    <div class="col-12">
-                        <span class="txt18 fblack text-left">Pasajero 1: <b>Adulto</b></span>
-                        <hr class="mt-2">
-                    </div>
-                    
-                    <div class="col-12">
-                        <form action="">
-                            <div class="form-row">
-                                <div class="form-group col-lg-4">
-                                    <label for="nombre" class="txt16 f700 fblack mb-2">Nombre</label>
-                                    <input type="text" class="form-control fblack txt18 shadow-none" id="nombre" placeholder="Ej: María">
-                                </div>
-                                <div class="form-group col-lg-4">
-                                    <label for="apellidos" class="txt16 f700 fblack mb-2">Apellido(s)</label>
-                                    <input type="text" class="form-control fblack txt18 shadow-none" id="apellidos" placeholder="Ej: Torres Gómez">
-                                </div>
-                                <div class="form-group col-lg-4">
-                                    <label for="email" class="txt16 f700 fblack mb-2">Correo electrónico o celular</label>
-                                    <input type="email" class="form-control fblack txt18 shadow-none" id="email" placeholder="Ej: mario@correo.com ó 5512234556">
-                                </div>
-                                <div class="form-group col-12 helpform py-1 px-3 txt18">
-                                    Ingresa tu nombre completo y proporciona un correo o número celular para enviarte tus boletos. 
-                                </div>
-                                <div class="form-group col-12 col-lg-6" data-aos="zoom-in" data-aos-duration="1700">
-                                    <a href="" data-toggle="modal" data-target="#modalAsistencia" class="txt18 f700 fgreen2">
-                                        ¿Qué es la asistencia total? <img src="assets/images/info.png" class="img-fluid" alt="">
-                                    </a>                                    
-                                </div>
-                                <div class="form-group col-12 col-lg-6 d-flex flex-column flex-sm-row flex-md-row flex-lg-row align-items-center justify-content-start justify-content-sm-start justify-content-md-start justify-content-lg-end" data-aos="fade-up" data-aos-duration="1600">
-                                    <span class="fblack txt18 f700 f18 mr-2">Agregar asistencia total</span>
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input custom-control-input-lg" id="asistenciatotal" checked>
-                                        <label class="custom-control-label pl-2" for="asistenciatotal">Ida $15.00 MXN</label>
-                                    </div>
-                                </div>
-                                <hr class="w-100">
-                                <div class="form-group col-12 d-flex align-items-center justify-content-start mt-3" data-aos="fade-down" data-aos-duration="1400">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input custom-control-input-lg" id="okterminos" checked>
-                                        <label class="custom-control-label pl-2" for="okterminos">De acuerdo con los <a href="" class="fpurple f700">Términos y Condiciones</a>, así como el <a href="" class="fpurple f700">Aviso de Privacidad</a>.</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+
+        <!-- Corridas disponibles -->
+        <section class="container-fluid grayf1back" style="filter: blur(5px);">
+            <div class="container-lg py-4" id="corridas" data-aos="fade-up" data-aos-duration="1500">
+                <!-- 
+                    Aquí se pintan las corridas N veces (mediante la función javascript de abajo) para evitar repetir el bloque HTML,
+                    si se quiere quitar la función y pintar el HTML de forma normal, basta con traer aquí el código dentro de la variable bloqueHTML
+                -->
             </div>
         </section>
-        
-        <footer class="container-fluid pt-3 pb-5">
-            <div class="container-lg">
-                <div class="row">
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-3 mb-sm-0 mb-md-0 mb-lg-0">
-                        <a href="pantalla2.html" class="btn btn-white w-100 py-4 titles24 shadow-none">Regresar</a>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-                        <a href="pantalla4.html" class="btn btn-gray w-100 py-4 titles24 shadow-none">Continuar</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-        
-        <!-- Modal -->
-        <div class="modal fade" id="modalAsistencia" tabindex="-1" aria-labelledby="modalAsistenciaLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content p-5 rounded-lg">
-                    <div class="modal-header justify-content-center">
-                        <h5 class="titles40" id="modalAsistenciaLabel">¿Qué es asistencia total?</h5>
-                    </div>
-                    
-                    <div class="modal-body pt-5">
-                        <p class="txt24">
-                            Es un servicio adicional en la compra de tu boleto, es completamente opcional y puedes adquirirla tanto en la taquilla como en nuestros canales digitales (página WEB y ADO Móvil). Aplica para todos los servicios directos.
-                        </p>
-                        <p class="txt24">
-                            Con este servicio puedes obtener asistencia médica, legal, funeraria, red de descuentos y otros servicios que puedas requerir. Estos beneficios tienen una cobertura de acuerdo a la vigencia que adquieras, la vigencia inicia una vez que llegaste a tu destino.
-                        </p>
-                        <p class="txt24">
-                            El cupón color azul es de 7 días y el cupón color negro es de 24 horas. Para mayor información ingresa a <a href="https://asistenciatotal.app/index.html" target="_blank" class="fpurple">asistenciatotal.app</a> o comunícate al <a href="tel:8000300236" target="_blank" class="fpurple">800 0300 236</a>.
-                        </p>
-                        <p class="txt24">
-                            Para hacer válido tu seguro de Asistencia Total debes conservar el boleto de tu viaje, ya que te lo solicitarán cuando te comuniques.
-                            Los servicios sólo son aplicables al haber descendido del autobús en la terminal de la ciudad destino marcada en tu boleto.
-                        </p>
-                    </div>
-                                        
-                    <div class="modal-footer border-0">
-                        <button type="button" class="btn btn-purple w-100 py-4 txt24 shadow-none" data-dismiss="modal">Aceptar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
         
             
         <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script> 
@@ -215,6 +107,63 @@
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init();
+            
+            const corridas = document.getElementById('corridas');
+
+            const bloqueHTML = `
+                <div class="row shadow whiteback mt-4 pt-3 rounded-top">
+                    <div class="col-12 col-sm-2 col-lg-2 d-flex align-items-center justify-content-center">
+                        <img src="assets/images/ADO.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-12 col-sm-7 col-lg-6 d-flex align-items-start justify-content-between borders">
+                        <div>
+                            <span class="titles24">06:00 h</span>
+                            <p class="txt14 pb-0 mb-0">México, TAPO</p>
+                        </div>
+                        <div>
+                            <span class="text14 fdark1">3h 10min. aprox. </span>
+                        </div>
+                        <div>
+                            <span class="titles24">06:00 h</span>
+                            <p class="txt14 pb-0 mb-0">México, TAPO</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-3 col-lg-2 offset-lg-0 px-2 px-sm-2 px-md-2 pt-3 pt-sm-3 pt-md-3 pt-lg-0">
+                        <p class="txt14 fred text-right mb-0 pb-0">
+                            <img src="assets/images/promo.png" class="img-fluid mt-n1" >
+                            $1,200.00 MXN
+                        </p>
+                        <p class="txt18 f700 fdark1 text-right mb-0 pb-0">$1,000.00MXN</p>
+                    </div>
+                    <div class="col-6 col-sm-3 offset-sm-9 col-lg-2 offset-lg-0 d-flex align-items-center justify-content-center pt-3 pt-sm-3 pt-md-3 pt-lg-0">
+                        <a href="pantalla3.html" class="btn btn-purple w-100 shadow-none">Seleccionar</a>
+                    </div>                
+                </div><!-- /row corridas -->
+                <div class="row shadow" style="border-top: 1px solid #B5BAC7; background-color: #ECEFF6;">
+                    <div class="col-8">
+                        <ul class="list-group list-group-horizontal justify-content-end">
+                            <li class="list-group-item">
+                                <span class="txt12">Viaje Local</span>
+                                <img src="assets/images/info.png" class="img-fluid" alt="" style="width: 15px;">
+                            </li>
+                            <li class="list-group-item">
+                                <span class="txt12">Servicio Lujo</span>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="txt12">Quedan 29 asientos</span>                                
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-4 d-flex align-items-center justify-content-end">
+                        <a href="#" class="btn purple-link d-flex align-items-center"><span class="mr-2">Más Información</span><iconify-icon icon="formkit:right" width="7" height="16"  style="color: #5F2167"></iconify-icon></a>
+                    </div>
+                </div>
+            `;
+
+            
+            for (let i = 0; i < 10; i++) {
+                corridas.innerHTML += bloqueHTML; 
+            }
         </script>
     </body>
 </html>

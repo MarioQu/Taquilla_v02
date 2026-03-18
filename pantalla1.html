@@ -9,6 +9,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
         <title>Taquilla reversible</title>
     </head>
     
@@ -23,7 +26,7 @@
                         <a href="#" class="btn btn-purple btn-lang shadow-none">
                             <img src="assets/images/idioma-white.png" alt=""> Español
                         </a>
-                        <a href="#" class="btn btn-white btn-lang shadow-none ml-3">
+                        <a href="#" class="btn btn-white2 btn-lang shadow-none ml-3">
                             <img src="assets/images/idioma-dark.png" alt=""> Inglés
                         </a>
                     </div>
@@ -49,7 +52,7 @@
             <div class="container-lg colcards shadow py-5 px-5">
                 <h2 class="titles40 fblack text-center" data-aos="fade-down" data-aos-duration="1800">¿A dónde quieres viajar?</h2>
                 
-                <form action="" class="container whiteback shadow p-3 px-3 rounded-lg" id="form-origen-destino">
+                <form action="" class="container whiteback shadow p-3 px-3 rounded-lg mt-3" id="form-origen-destino">
                     <div class="form-group ida_regreso d-flex align-items-center" style="border: 5px solid #E9E9E9; border-radius: 4px;">
                         <div class="custom-control custom-radio pl-0">
                             <input type="radio" id="ida_reg" name="customRadio" class="custom-control-input" checked>
@@ -65,11 +68,11 @@
                         <div class="row">
                             <div class="col">
                                 <label for="origen">Origen</label>
-                                <input type="text" class="form-control" id="origen" placeholder="¿De dónde sales?">
+                                <input type="text" class="form-control" placeholder="¿De dónde sales?" data-toggle="modal" data-target="#modalOrigen">
                             </div>
                             <div class="col">
                                 <label for="destino">Destino</label>
-                                <input type="text" class="form-control" id="destino" placeholder="¿A dónde vas?">
+                                <input type="text" class="form-control" id="destino" placeholder="¿A dónde vas?" data-toggle="modal" data-target="#modalDestino">
                             </div>
                         </div>
                     </div>
@@ -78,21 +81,21 @@
                         <div class="row">
                             <div class="col">
                                 <label for="ida">Ida</label>
-                                <input type="text" class="form-control fblack" id="ida" placeholder="Viernes. 12 Marzo">
+                                <input type="text" class="form-control fblack is-valid" id="ida" placeholder="Viernes. 12 Marzo" data-toggle="modal" data-target="#modalFechaViaje">
                             </div>
                             <div class="col">
                                 <label for="regreso">Regreso</label>
-                                <input type="text" class="form-control" id="regreso" placeholder="¿Cuándo regresas?">
+                                <input type="text" class="form-control" id="regreso" placeholder="¿Cuándo regresas?" data-toggle="modal" data-target="#modalFechaViaje">
                             </div>
                             <div class="col">
                                 <label for="pasajeros">Pasajeros</label>
-                                <input type="text" class="form-control fblack" id="pasajeros" placeholder="1 adulto">
+                                <input type="text" class="form-control fblack is-valid" id="pasajeros" placeholder="1 adulto" data-toggle="modal" data-target="#modalViajantes">
                             </div>
                         </div>
                     </div>
                     
                     <div class="form-group mt-5">
-                        <input type="submit" class="btn btn-gray w-100 py-4 titles24 shadow-none" value="Buscar Viaje">
+                        <input type="submit" class="btn btn-gray2 w-100 py-4 titles24 shadow-none" value="Buscar Viaje">
                     </div>
                 </form>
                 
@@ -189,20 +192,35 @@
             </div>
         </section>
         
-        <!-- Modal -->
+        <!-- Modal Quiénes Viajan -->
         <div class="modal fade" id="modalViajantes" tabindex="-1" aria-labelledby="modalViajantesLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-xl">
                 <div class="modal-content py-4 px-4">
-                    <div class="modal-header justify-content-center">
-                        <h5 class="text-center titles40 fblack" id="modalViajantesLabel">¿Quiénes viajan?</h5>
+                    <div class="modal-header justify-content-start">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-4">
+                                    <button class="btn btn-white w-50 py-3 titles24 shadow-none d-flex align-items-center justify-content-center" data-dismiss="modal">
+                                        <iconify-icon icon="ant-design:left-outlined"></iconify-icon> Regresar
+                                    </button>
+                                </div>                                
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-12">
+                                    <h5 class="text-left titles40 fblack" id="modalViajantesLabel">¿Quiénes viajan?</h5>      
+                                </div>
+                            </div>
+                        </div>                        
                     </div>
                     <div class="modal-body pb-5">
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="col-12 col-lg-6 d-flex align-items-end justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-start">
-                                    <span class="titles40 fblack">Puebla, Capu</span>
+                                <div class="col-12 col-lg-12 d-flex align-items-center justify-content-start">
+                                    <span class="titles32 fblack">Central México, Norte, CDMX</span>
+                                    <img src="assets/images/right.png" style="width: 20px;" class="mx-2" alt="">
+                                    <span class="titles32 fblack">Costa Esmeralda, Ver.</span>
                                 </div>
-                                <div class="col-12 col-lg-6 d-flex align-items-center justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-end">
+                                <div class="col-12 col-lg-6 d-flex align-items-center justify-content-start">
                                     <span class="txt24 fblack">Hoy - 26 de marzo .  21:30 h</span>
                                 </div>
                             </div>
@@ -308,10 +326,690 @@
                     <div class="modal-footer">
                         <div class="row">
                             <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-2 mb-sm-2 mb-md-2 mb-lg-0">
-                                <button type="button" class="btn btn-lg btn-white py-3 shadow-none" data-dismiss="modal">Modificar viaje</button>
+                                <button type="button" class="btn btn-lg btn-white py-3 shadow-none" data-dismiss="modal">Regresar</button>
                             </div>
                             <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                                <a href="pantalla2.html" type="button" class="btn btn-lg btn-green py-3 shadow-none">Comprar</a>
+                                <a href="#" type="button" class="btn btn-lg btn-purple py-3 shadow-none" data-dismiss="modal">Continuar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <!-- Modal Origen -->
+        <div class="modal fade" id="modalOrigen" tabindex="-1" aria-labelledby="modalOrigenLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false" >
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">                   
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-3 mb-sm-0 mb-md-0 mb-lg-0">
+                                    <button class="btn btn-white w-50 py-3 titles24 shadow-none d-flex align-items-center justify-content-center" data-dismiss="modal">
+                                        <iconify-icon icon="ant-design:left-outlined"></iconify-icon> Regresar
+                                    </button>
+                                </div>
+                            </div><!-- /.row -->
+                            
+                            <div class="row mt-4">
+                                <div class="col-12 d-flex align-items-center justify-content-center pb-4" data-aos="fade-down" data-aos-duration="1400" style="border-bottom: 1px solid #E3E7F2;">
+                                    <span class="fblack titles32">¿De dónde sales?</span>
+                                    <hr class="mt-2">
+                                </div>
+                            </div><!-- /.row -->
+                            
+                            <div class="row mt-4">
+                                <div class="col-12">
+                                    <span class="text18">Buscar origen</span>
+                                    <form action="" class="mt-1">
+                                        <input type="text" class="form-control" placeholder="Encuentra una terminal de origen">
+                                    </form>
+                                </div>
+                                
+                                <div class="row gray2back shadow p-5 rounded-lg mt-5 mx-4">
+                                    <div class="col-12">
+                                        <span class="txt18 fblack text-left"><b>Terminales</b></span>
+                                        <hr class="mt-2">
+                                    </div>
+                                    
+                                    <div class="col-12">
+                                        <div class="collapse-terminales">
+                                            <a class="d-flex align-items-center justify-content-between" data-toggle="collapse" href="#collap1" role="button" aria-expanded="false" aria-controls="collap1">
+                                                <span>Campeche</span>                                
+                                            </a>
+                                            <div class="collapse mt-3" id="collap1">
+                                                <div class="list-group list-group-terminales">
+                                                    <a href="#" class="list-group-item list-group-item-action mb-0" aria-current="true">
+                                                        Elegir todas manualmente
+                                                        <hr class="mb-0 mt-2" style="border-color: #fff;">
+                                                    </a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Campeche 1</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Campeche 2</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Campeche 3</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Campeche 4</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Campeche 5</a>
+                                                </div>   
+                                            </div>
+                                        </div>
+                                    </div><!-- -->
+                                    
+                                    <div class="col-12 mt-3">
+                                        <div class="collapse-terminales">
+                                            <a class="d-flex align-items-center justify-content-between" data-toggle="collapse" href="#collap2" role="button" aria-expanded="false" aria-controls="collap2">
+                                                <span>Chiapas</span>                                
+                                            </a>
+                                            <div class="collapse mt-3" id="collap2">
+                                                <div class="list-group list-group-terminales">
+                                                    <a href="#" class="list-group-item list-group-item-action mb-0" aria-current="true">
+                                                        Elegir todas manualmente
+                                                        <hr class="mb-0 mt-2" style="border-color: #fff;">
+                                                    </a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Chiapas 1</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Chiapas 2</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Chiapas 3</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Chiapas 4</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Chiapas 5</a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div><!-- -->
+                                    
+                                    <div class="col-12 mt-3">
+                                        <div class="collapse-terminales">
+                                            <a class="d-flex align-items-center justify-content-between" data-toggle="collapse" href="#collap3" role="button" aria-expanded="false" aria-controls="collap3">
+                                                <span>Ciudad de México</span>                                
+                                            </a>
+                                            <div class="collapse mt-3" id="collap3">
+                                                <div class="list-group list-group-terminales">
+                                                    <a href="#" class="list-group-item list-group-item-action mb-0" aria-current="true">
+                                                        Elegir todas manualmente
+                                                        <hr class="mb-0 mt-2" style="border-color: #fff;">
+                                                    </a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Aeropuerto AICM, CDMX</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Central México Norte, CDMX</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Ejecutiva del Sur, CDMX</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">México Taxqueña, CDMX</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Politécnico, CDMX</a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div><!-- -->
+                                    
+                                    <div class="col-12 mt-3">
+                                        <div class="collapse-terminales">
+                                            <a class="d-flex align-items-center justify-content-between" data-toggle="collapse" href="#collap4" role="button" aria-expanded="false" aria-controls="collap4">
+                                                <span>Estado de México</span>                                
+                                            </a>
+                                            <div class="collapse mt-3" id="collap4">
+                                                <div class="list-group list-group-terminales">
+                                                    <a href="#" class="list-group-item list-group-item-action mb-0" aria-current="true">
+                                                        Elegir todas manualmente
+                                                        <hr class="mb-0 mt-2" style="border-color: #fff;">
+                                                    </a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Estado de México 1</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Estado de México 2</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Estado de México 3</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Estado de México 4</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Estado de México 5</a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div><!-- -->
+                                    
+                                    <div class="col-12 mt-3">
+                                        <div class="collapse-terminales">
+                                            <a class="d-flex align-items-center justify-content-between" data-toggle="collapse" href="#collap5" role="button" aria-expanded="false" aria-controls="collap5">
+                                                <span>Guerrero</span>                                
+                                            </a>
+                                            <div class="collapse mt-3" id="collap5">
+                                                <div class="list-group list-group-terminales">
+                                                    <a href="#" class="list-group-item list-group-item-action mb-0" aria-current="true">
+                                                        Elegir todas manualmente
+                                                        <hr class="mb-0 mt-2" style="border-color: #fff;">
+                                                    </a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Guerrero 1</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Guerrero 2</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Guerrero 3</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Guerrero 4</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Guerrero 5</a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div><!-- -->
+                                    
+                                    <div class="col-12 mt-3">
+                                        <div class="collapse-terminales">
+                                            <a class="d-flex align-items-center justify-content-between" data-toggle="collapse" href="#collap6" role="button" aria-expanded="false" aria-controls="collap6">
+                                                <span>Hidalgo</span>                                
+                                            </a>
+                                            <div class="collapse mt-3" id="collap6">
+                                                <div class="list-group list-group-terminales">
+                                                    <a href="#" class="list-group-item list-group-item-action mb-0" aria-current="true">
+                                                        Elegir todas manualmente
+                                                        <hr class="mb-0 mt-2" style="border-color: #fff;">
+                                                    </a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Hidalgo 1</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Hidalgo 2</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Hidalgo 3</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Hidalgo 4</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Hidalgo 5</a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div><!-- -->
+                                    
+                                    <div class="col-12 mt-3">
+                                        <div class="collapse-terminales">
+                                            <a class="d-flex align-items-center justify-content-between" data-toggle="collapse" href="#collap7" role="button" aria-expanded="false" aria-controls="collap7">
+                                                <span>Michoacán</span>                                
+                                            </a>
+                                            <div class="collapse mt-3" id="collap7">
+                                                <div class="list-group list-group-terminales">
+                                                    <a href="#" class="list-group-item list-group-item-action mb-0" aria-current="true">
+                                                        Elegir todas manualmente
+                                                        <hr class="mb-0 mt-2" style="border-color: #fff;">
+                                                    </a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Michoacán 1</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Michoacán 2</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Michoacán 3</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Michoacán 4</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Michoacán 5</a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div><!-- -->
+                                    
+                                    <div class="col-12 mt-3">
+                                        <div class="collapse-terminales">
+                                            <a class="d-flex align-items-center justify-content-between" data-toggle="collapse" href="#collap8" role="button" aria-expanded="false" aria-controls="collap8">
+                                                <span>Morelos</span>                                
+                                            </a>
+                                            <div class="collapse mt-3" id="collap8">
+                                                <div class="list-group list-group-terminales">
+                                                    <a href="#" class="list-group-item list-group-item-action mb-0" aria-current="true">
+                                                        Elegir todas manualmente
+                                                        <hr class="mb-0 mt-2" style="border-color: #fff;">
+                                                    </a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Morelos 1</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Morelos 2</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Morelos 3</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Morelos 4</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Morelos 5</a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div><!-- -->
+                                    
+                                    <div class="col-12 mt-3">
+                                        <div class="collapse-terminales">
+                                            <a class="d-flex align-items-center justify-content-between" data-toggle="collapse" href="#collap9" role="button" aria-expanded="false" aria-controls="collap9">
+                                                <span>Oaxaca</span>                                
+                                            </a>
+                                            <div class="collapse mt-3" id="collap9">
+                                                <div class="list-group list-group-terminales">
+                                                    <a href="#" class="list-group-item list-group-item-action mb-0" aria-current="true">
+                                                        Elegir todas manualmente
+                                                        <hr class="mb-0 mt-2" style="border-color: #fff;">
+                                                    </a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Oaxaca 1</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Oaxaca 2</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Oaxaca 3</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Oaxaca 4</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Oaxaca 5</a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div><!-- -->
+                                    
+                                    <div class="col-12 mt-3">
+                                        <div class="collapse-terminales">
+                                            <a class="d-flex align-items-center justify-content-between" data-toggle="collapse" href="#collap10" role="button" aria-expanded="false" aria-controls="collap10">
+                                                <span>Puebla</span>                                
+                                            </a>
+                                            <div class="collapse mt-3" id="collap10">
+                                                <div class="list-group list-group-terminales">
+                                                    <a href="#" class="list-group-item list-group-item-action mb-0" aria-current="true">
+                                                        Elegir todas manualmente
+                                                        <hr class="mb-0 mt-2" style="border-color: #fff;">
+                                                    </a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Puebla 1</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Puebla 2</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Puebla 3</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Puebla 4</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Puebla 5</a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div><!-- -->
+                                    
+                                    <div class="col-12 mt-3">
+                                        <div class="collapse-terminales">
+                                            <a class="d-flex align-items-center justify-content-between" data-toggle="collapse" href="#collap11" role="button" aria-expanded="false" aria-controls="collap11">
+                                                <span>Quintana Roo</span>                                
+                                            </a>
+                                            <div class="collapse mt-3" id="collap11">
+                                                <div class="list-group list-group-terminales">
+                                                    <a href="#" class="list-group-item list-group-item-action mb-0" aria-current="true">
+                                                        Elegir todas manualmente
+                                                        <hr class="mb-0 mt-2" style="border-color: #fff;">
+                                                    </a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Quintana Roo 1</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Quintana Roo 2</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Quintana Roo 3</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Quintana Roo 4</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Quintana Roo 5</a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div><!-- -->
+                                    
+                                    <div class="col-12 mt-3">
+                                        <div class="collapse-terminales">
+                                            <a class="d-flex align-items-center justify-content-between" data-toggle="collapse" href="#collap12" role="button" aria-expanded="false" aria-controls="collap12">
+                                                <span>Tabasco</span>                                
+                                            </a>
+                                            <div class="collapse mt-3" id="collap12">
+                                                <div class="list-group list-group-terminales">
+                                                    <a href="#" class="list-group-item list-group-item-action mb-0" aria-current="true">
+                                                        Elegir todas manualmente
+                                                        <hr class="mb-0 mt-2" style="border-color: #fff;">
+                                                    </a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tabasco 1</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tabasco 2</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tabasco 3</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tabasco 4</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tabasco 5</a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div><!-- -->
+                                    
+                                    <div class="col-12 mt-3">
+                                        <div class="collapse-terminales">
+                                            <a class="d-flex align-items-center justify-content-between" data-toggle="collapse" href="#collap13" role="button" aria-expanded="false" aria-controls="collap13">
+                                                <span>Tamaulipas</span>                                
+                                            </a>
+                                            <div class="collapse mt-3" id="collap13">
+                                                <div class="list-group list-group-terminales">
+                                                    <a href="#" class="list-group-item list-group-item-action mb-0" aria-current="true">
+                                                        Elegir todas manualmente
+                                                        <hr class="mb-0 mt-2" style="border-color: #fff;">
+                                                    </a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tamaulipas 1</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tamaulipas 2</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tamaulipas 3</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tamaulipas 4</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tamaulipas 5</a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div><!-- -->
+                                    
+                                    <div class="col-12 mt-3">
+                                        <div class="collapse-terminales">
+                                            <a class="d-flex align-items-center justify-content-between" data-toggle="collapse" href="#collap14" role="button" aria-expanded="false" aria-controls="collap14">
+                                                <span>Tlaxcala</span>                                
+                                            </a>
+                                            <div class="collapse mt-3" id="collap14">
+                                                <div class="list-group list-group-terminales">
+                                                    <a href="#" class="list-group-item list-group-item-action mb-0" aria-current="true">
+                                                        Elegir todas manualmente
+                                                        <hr class="mb-0 mt-2" style="border-color: #fff;">
+                                                    </a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tlaxcala 1</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tlaxcala 2</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tlaxcala 3</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tlaxcala 4</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tlaxcala 5</a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div><!-- -->
+                                    
+                                    <div class="col-12 mt-3">
+                                        <div class="collapse-terminales">
+                                            <a class="d-flex align-items-center justify-content-between" data-toggle="collapse" href="#collap15" role="button" aria-expanded="false" aria-controls="collap15">
+                                                <span>Veracruz</span>                                
+                                            </a>
+                                            <div class="collapse mt-3" id="collap15">
+                                                <div class="list-group list-group-terminales">
+                                                    <a href="#" class="list-group-item list-group-item-action mb-0" aria-current="true">
+                                                        Elegir todas manualmente
+                                                        <hr class="mb-0 mt-2" style="border-color: #fff;">
+                                                    </a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Veracruz 1</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Veracruz 2</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Veracruz 3</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Veracruz 4</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Veracruz 5</a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div><!-- -->
+                                    
+                                    <div class="col-12 mt-3">
+                                        <div class="collapse-terminales">
+                                            <a class="d-flex align-items-center justify-content-between" data-toggle="collapse" href="#collap16" role="button" aria-expanded="false" aria-controls="collap16">
+                                                <span>Yucatán</span>                                
+                                            </a>
+                                            <div class="collapse mt-3" id="collap16">
+                                                <div class="list-group list-group-terminales">
+                                                    <a href="#" class="list-group-item list-group-item-action mb-0" aria-current="true">
+                                                        Elegir todas manualmente
+                                                        <hr class="mb-0 mt-2" style="border-color: #fff;">
+                                                    </a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Yucatán 1</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Yucatán 2</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Yucatán 3</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Yucatán 4</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Yucatán 5</a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div><!-- -->
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /.modal-body -->
+                    
+                    <div class="modal-footer pt-4 border-0">
+                        <div class="container">
+                            <div class="row">
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-3 mb-sm-0 mb-md-0 mb-lg-0">
+                        <button class="btn btn-white w-100 py-4 titles24 shadow-none" data-dismiss="modal">Regresar</button>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                        <button class="btn btn-gray w-100 py-4 titles24 shadow-none">Aceptar</button>
+                    </div>
+                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- Modal Destino -->
+        <div class="modal fade" id="modalDestino" tabindex="-1" aria-labelledby="modalDestinoLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false" >
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">                   
+                    <div class="modal-body">
+                        <div class="container">
+                             <div class="row">
+                                <div class="col-12">
+                                    <button class="btn btn-white w-50 py-3 titles24 shadow-none d-flex align-items-center justify-content-center" data-dismiss="modal">
+                                        <iconify-icon icon="ant-design:left-outlined"></iconify-icon> Regresar
+                                    </button>
+                                </div>
+                            </div><!-- /.row -->
+                            
+                            <div class="row mt-4">
+                                <div class="col-12 d-flex align-items-center justify-content-center pb-4" data-aos="fade-down" data-aos-duration="1400" style="border-bottom: 1px solid #E3E7F2;">
+                                    <span class="fblack titles32">¿A dónde vas?</span>
+                                    <hr class="mt-2">
+                                </div>
+                            </div><!-- /.row -->
+                            
+                            <div class="row mt-4">
+                                <div class="col-12">
+                                    <span class="text18">Buscar destino</span>
+                                    <form action="" class="mt-1">
+                                        <input type="text" class="form-control" placeholder="Encuentra una terminal para tu destino">
+                                    </form>
+                                </div>
+                                
+                                <div class="row gray2back shadow p-5 rounded-lg mt-5 mx-4">
+                                    <div class="col-12">
+                                        <span class="txt18 fblack text-left"><b>Terminales disponibles</b></span>
+                                        <hr class="mt-2">
+                                    </div>
+                                    
+                                    <div class="col-12">
+                                        <div class="collapse-terminales">
+                                            <a class="d-flex align-items-center justify-content-between" data-toggle="collapse" href="#collap1" role="button" aria-expanded="false" aria-controls="collap1">
+                                                <span>Puebla</span>                                
+                                            </a>
+                                            <div class="collapse mt-3" id="collap1">
+                                                <div class="list-group list-group-terminales">
+                                                    <a href="#" class="list-group-item list-group-item-action mb-0" aria-current="true">
+                                                        Elegir todas manualmente
+                                                        <hr class="mb-0 mt-2" style="border-color: #fff;">
+                                                    </a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Puebla 1</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Puebla 2</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Puebla 3</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Puebla 4</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Puebla 5</a>
+                                                </div>   
+                                            </div>
+                                        </div>
+                                    </div><!-- -->
+                                    
+                                    <div class="col-12 mt-3">
+                                        <div class="collapse-terminales">
+                                            <a class="d-flex align-items-center justify-content-between" data-toggle="collapse" href="#collap2" role="button" aria-expanded="false" aria-controls="collap2">
+                                                <span>Quintana Roo</span>                                
+                                            </a>
+                                            <div class="collapse mt-3" id="collap2">
+                                                <div class="list-group list-group-terminales">
+                                                    <a href="#" class="list-group-item list-group-item-action mb-0" aria-current="true">
+                                                        Elegir todas manualmente
+                                                        <hr class="mb-0 mt-2" style="border-color: #fff;">
+                                                    </a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Quintana Roo 1</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Quintana Roo 2</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Quintana Roo 3</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Quintana Roo 4</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Quintana Roo 5</a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div><!-- -->
+                                    
+                                    <div class="col-12 mt-3">
+                                        <div class="collapse-terminales">
+                                            <a class="d-flex align-items-center justify-content-between" data-toggle="collapse" href="#collap3" role="button" aria-expanded="false" aria-controls="collap3">
+                                                <span>Tabasco</span>                                
+                                            </a>
+                                            <div class="collapse mt-3" id="collap3">
+                                                <div class="list-group list-group-terminales">
+                                                    <a href="#" class="list-group-item list-group-item-action mb-0" aria-current="true">
+                                                        Elegir todas manualmente
+                                                        <hr class="mb-0 mt-2" style="border-color: #fff;">
+                                                    </a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tabasco 1</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tabasco 2</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tabasco 3</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tabasco 4</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tabasco 5</a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div><!-- -->
+                                    
+                                    <div class="col-12 mt-3">
+                                        <div class="collapse-terminales">
+                                            <a class="d-flex align-items-center justify-content-between" data-toggle="collapse" href="#collap4" role="button" aria-expanded="false" aria-controls="collap4">
+                                                <span>Tamaulipas</span>                                
+                                            </a>
+                                            <div class="collapse mt-3" id="collap4">
+                                                <div class="list-group list-group-terminales">
+                                                    <a href="#" class="list-group-item list-group-item-action mb-0" aria-current="true">
+                                                        Elegir todas manualmente
+                                                        <hr class="mb-0 mt-2" style="border-color: #fff;">
+                                                    </a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tamaulipas 1</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tamaulipas 2</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tamaulipas 3</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tamaulipas 4</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tamaulipas 5</a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div><!-- -->
+                                    
+                                    <div class="col-12 mt-3">
+                                        <div class="collapse-terminales">
+                                            <a class="d-flex align-items-center justify-content-between" data-toggle="collapse" href="#collap5" role="button" aria-expanded="false" aria-controls="collap5">
+                                                <span>Tlaxcala</span>                                
+                                            </a>
+                                            <div class="collapse mt-3" id="collap5">
+                                                <div class="list-group list-group-terminales">
+                                                    <a href="#" class="list-group-item list-group-item-action mb-0" aria-current="true">
+                                                        Elegir todas manualmente
+                                                        <hr class="mb-0 mt-2" style="border-color: #fff;">
+                                                    </a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tlaxcala 1</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tlaxcala 2</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tlaxcala 3</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tlaxcala 4</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tlaxcala 5</a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div><!-- -->
+                                    
+                                    <div class="col-12 mt-3">
+                                        <div class="collapse-terminales">
+                                            <a class="d-flex align-items-center justify-content-between" data-toggle="collapse" href="#collap6" role="button" aria-expanded="false" aria-controls="collap6">
+                                                <span>Veracruz</span>                                
+                                            </a>
+                                            <div class="collapse mt-3" id="collap6">
+                                                <div class="list-group list-group-terminales">
+                                                    <a href="#" class="list-group-item list-group-item-action mb-0" aria-current="true">
+                                                        Elegir todas manualmente
+                                                        <hr class="mb-0 mt-2" style="border-color: #fff;">
+                                                    </a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Minatitlán 1</a>
+                                                    <a href="#" class="list-group-item list-group-item-action" data-toggle="collapse" href="#collap6a" role="button" aria-expanded="false" aria-controls="collap6a">
+                                                        Nautla 2
+                                                    </a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Poza Rica 3</a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div><!-- -->
+                                    
+                                    <div class="col-12 mt-3">
+                                        <div class="collapse-terminales">
+                                            <a class="d-flex align-items-center justify-content-between" data-toggle="collapse" href="#collap7" role="button" aria-expanded="false" aria-controls="collap7">
+                                                <span>Yucatán</span>                                
+                                            </a>
+                                            <div class="collapse mt-3" id="collap7">
+                                                <div class="list-group list-group-terminales">
+                                                    <a href="#" class="list-group-item list-group-item-action mb-0" aria-current="true">
+                                                        Elegir todas manualmente
+                                                        <hr class="mb-0 mt-2" style="border-color: #fff;">
+                                                    </a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tlaxcala 1</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tlaxcala 2</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tlaxcala 3</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tlaxcala 4</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Tlaxcala 5</a>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div><!-- -->                                                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /.modal-body -->
+                    
+                    <div class="modal-footer pt-4 border-0">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-3 mb-sm-0 mb-md-0 mb-lg-0">
+                                    <button class="btn btn-white w-100 py-4 titles24 shadow-none" data-dismiss="modal">Regresar</button>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                    <button class="btn btn-gray w-100 py-4 titles24 shadow-none">Aceptar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- Modal Fecha Viaje -->
+        <div class="modal fade" id="modalFechaViaje" tabindex="-1" aria-labelledby="modalFechaViajeLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false" >
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">                   
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-4">
+                                    <button class="btn btn-white w-50 py-3 titles24 shadow-none d-flex align-items-center justify-content-center" data-dismiss="modal">
+                                        <iconify-icon icon="ant-design:left-outlined"></iconify-icon> Regresar
+                                    </button>
+                                </div>
+                            </div><!-- /.row -->
+                                                        
+
+                            <div class="row mt-4">
+                                <div class="col-12 d-flex align-items-center justify-content-center pb-4" data-aos="fade-down" data-aos-duration="1400" style="border-bottom: 1px solid #E3E7F2;">
+                                    <span class="fblack titles32">Selecciona la fecha de tu viaje</span>
+                                    <hr class="mt-2">                                                                                                            
+                                </div>
+                                
+                                <div class="col-12 mt-3">
+                                    <div class="d-flex align-items-center justify-content-start">
+                                        <span class="fblack titles24"> Central México, Norte</span><img src="assets/images/right.png" class="mx-2" style="width: 20px;" alt=""> <span class="fblack titles24">Costa Esmeralda, Ver.</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12 my-3">
+                                    <div class="alert alert-success">
+                                        <img src="assets/images/disscount.png" alt="">
+                                        <span class="fblack txt16"><strong>Aprovecha tu compra anticipada</strong> y obtén hasta un <strong>50% de descuento</strong></span>
+                                    </div>
+                                </div>
+                            </div><!-- /.row -->
+                            
+                            <div class="row">
+                                <div class="col-12" style="background-color: #F6F7FB;">
+                                    <form action="" class="text-center">
+                                        <div id="calendario"></div>
+                                    </form>
+                                </div>
+                            </div>
+                            
+                            <div class="row mt-4">
+                                <div class="col-12 fechas-viaje p-2">
+                                    <ul class="p-0 m-0 list-fechas-viaje d-flex align-items-center justify-content-start">
+                                        <li><div class="square"></div> Descuento</li>
+                                        <li><div class="square"></div> Poca disponibilidad</li>
+                                        <li><div class="square"></div> No disponible</li>
+                                        <li><div class="square"></div> Seleccionados</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="row mt-4">
+                                <div class="col-12">
+                                    <form action="">
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                            <label class="form-check-label" for="exampleCheck1">Quiero ir y regresar el mismo día</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /.modal-body -->
+                    
+                    <div class="modal-footer pt-4 border-0">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-3 mb-sm-0 mb-md-0 mb-lg-0">
+                                    <button class="btn btn-white w-100 py-4 titles24 shadow-none" data-dismiss="modal">Regresar</button>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                    <button class="btn btn-gray w-100 py-4 titles24 shadow-none">Aceptar</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -326,6 +1024,36 @@
         <script>
             AOS.init();
             
+            /* ********** Lightpicker ********** */
+            new Litepicker({
+                element: document.getElementById('calendario'),
+                inlineMode: true,
+                singleMode: false,
+                numberOfMonths: 3,
+                numberOfColumns: 1,
+                lang: 'es-ES',
+                buttonText: {
+                    previousMonth: '←',
+                    nextMonth: '→',
+                    apply: 'Aplicar',
+                    cancel: 'Cancelar',
+                    reset: 'Reiniciar'
+                },
+
+                tooltipText: {
+                    one: 'día',
+                    other: 'días'
+                },
+
+                tooltipNumber: (totalDays) => {
+                    return totalDays;
+                }
+            });
+            
+            
+            
+            
+                                 
             $(document).ready(function(){
                 var total_ad    = 0;
                 var total_ni    = 0;

@@ -9,6 +9,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
         <title>Taquilla reversible</title>
     </head>
     
@@ -16,7 +17,11 @@
         <section class="container-fluid py-3 sticky-top" id="estatus_corrida">
             <div class="container-lg">
                 <div class="row">
-                    <div class="col-12 col-lg-12 d-flex align-items-center justify-content-center">
+                    <div class="col-12 col-lg-12 d-flex align-items-center justify-content-between">
+                        <button class="btn btn-white py-1 titles24 shadow-none d-flex align-items-center justify-content-center mr-3">
+                            <iconify-icon icon="ant-design:left-outlined"></iconify-icon> Regresar
+                        </button>
+                        
                         <img src="assets/images/corrida-on.png" class="img-fluid mr-2" alt="">
                         <span class="txt14">Elegir corrida</span>
                         
@@ -44,13 +49,13 @@
                     <div class="col-10 col-lg-11 pl-0">
                         <div class="row">
                             <div class="col-lg-12" data-aos="fade-left" data-aos-duration="1500">
-                                <h5 class="titles24">México, TAPO</h5>
+                                <h5 class="titles24">Central México Norte, CDMX</h5>
                                 <span class="text18">Terminal origen</span>
                                 <!-- <span class="float-right titles24">12:00hrs</span> -->
                                 <hr>
                             </div>
                             <div class="col-lg-12" data-aos="fade-right" data-aos-duration="1900">
-                                <h5 class="titles24">Puebla, CAPU</h5>
+                                <h5 class="titles24">Costa Esmeralda, Ver.</h5>
                                 <span class="text18">Terminal destino</span>
                                 <!-- <span class="float-right titles24">14:30hrs</span> -->
                                 <hr>
@@ -65,11 +70,15 @@
         <section class="container-fluid py-4 whiteback">
             <div class="container-lg">
                 <div class="row">
-                    <div class="col-lg-6" data-aos="zoom-in" data-aos-duration="1900">
-                        <span class="fblack titles32">1 Adulto</span>
+                    <div class="col-lg-12 d-flex align-items-center justify-content-start" data-aos="zoom-in" data-aos-duration="1900">
+                        <button class="btn btn-purple py-1 titles24 shadow-none mr-3 text-uppercase">
+                            Elije tu(s) boleto(s) de ida
+                        </button>
+                        <p class="fblack titles24 m-0 p-0">Hoy - Vier. 30 de ago. 21:31 h</p>                         
                     </div>
-                    <div class="col-lg-6 text-left text-sm-left text-md-left text-lg-right" data-aos="zoom-in" data-aos-duration="1900">
-                        <span class="fblack titles24">Hoy - Vier. 30 de ago. 21:31 h</span>
+                    
+                    <div class="col-lg-12 text-left mt-3" data-aos="zoom-in" data-aos-duration="1900">
+                        <span class="fblack txt18">3 adultos, 2 niños, 1 INAPAM</span>                                                                       
                     </div>
                 </div>
             </div>
@@ -86,16 +95,6 @@
             </div>
         </section>
         
-        <section class="container-fluid py-5">
-            <div class="container-lg">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <a href="index.html" class="btn btn-white btn-lg w-100 py-3 shadow-none">Regresar</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
             
         <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script> 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -106,7 +105,7 @@
             const corridas = document.getElementById('corridas');
 
             const bloqueHTML = `
-                <div class="row shadow whiteback mt-3 py-3 rounded-lg">
+                <div class="row shadow whiteback mt-4 pt-3 rounded-top">
                     <div class="col-12 col-sm-2 col-lg-2 d-flex align-items-center justify-content-center">
                         <img src="assets/images/ADO.png" alt="" class="img-fluid">
                     </div>
@@ -132,8 +131,27 @@
                     </div>
                     <div class="col-6 col-sm-3 offset-sm-9 col-lg-2 offset-lg-0 d-flex align-items-center justify-content-center pt-3 pt-sm-3 pt-md-3 pt-lg-0">
                         <a href="pantalla3.html" class="btn btn-purple w-100 shadow-none">Seleccionar</a>
-                    </div>
+                    </div>                
                 </div><!-- /row corridas -->
+                <div class="row shadow" style="border-top: 1px solid #B5BAC7; background-color: #ECEFF6;">
+                    <div class="col-8">
+                        <ul class="list-group list-group-horizontal justify-content-end">
+                            <li class="list-group-item">
+                                <span class="txt12">Viaje Local</span>
+                                <img src="assets/images/info.png" class="img-fluid" alt="" style="width: 15px;">
+                            </li>
+                            <li class="list-group-item">
+                                <span class="txt12">Servicio Lujo</span>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="txt12">Quedan 29 asientos</span>                                
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-4 d-flex align-items-center justify-content-end">
+                        <a href="#" class="btn purple-link d-flex align-items-center"><span class="mr-2">Más Información</span><iconify-icon icon="formkit:right" width="7" height="16"  style="color: #5F2167"></iconify-icon></a>
+                    </div>
+                </div>
             `;
 
             

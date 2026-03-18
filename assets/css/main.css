@@ -21,7 +21,7 @@ a{
     --purple:       #5F2167;
     --purple2:      #E4DAE6;
     --gray1:        #808391;
-    --gray2:        #F6F7FB;
+    --gray2:        #F4F6F9;
     --gray3:        #F4F6F9;
     --grayf1:       #F1F3F9;
     --dark1:        #1D1F24;
@@ -147,6 +147,11 @@ a{
     font-weight: 700;
 }
 
+.alert-success{
+    background-color: #EBF7F6 !important;
+    border: 1px solid #B9E9E4 !important;
+}
+
 /* ---------- Botones ---------- */
 .btn-lang{
     width: 190px;
@@ -169,22 +174,33 @@ a{
     background-color: var(--white);
     border: 1px solid var(--purple);
     color: var(--purple);
-}.btn-white:hover{
+}.btn-white2{
+    background-color: var(--white);
+    border: 1px solid transparent;
+    color: var(--purple);
+}.btn-white:hover,
+.btn-white2:hover{
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15);
     background-color: var(--purple);
     border: 1px solid var(--white);
     color: var(--white);
 }
 
-.btn-gray{
+.btn-gray,
+.btn-gray2{
     background-color: #E3E7F2;
     border: 1px solid #E3E7F2;
     color: #474A56;
 }.btn-gray:hover{
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15);
-    background-color: var(--white);
+    background-color: var(--purple);
     border: 1px solid var(--purple);
-    color: var(--purple);
+    color: var(--white);
+}.btn-gray2:hover{
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15);
+    background-color: var(--green);
+    border: 1px solid var(--green);
+    color: var(--white);
 }
 
 .btn-green{
@@ -196,6 +212,12 @@ a{
     background-color: var(--white);
     border: 1px solid var(--green);
     color: var(--green);
+}
+
+.purple-link{
+    color: var(--purple);
+}.purple-link:hover{
+    color: var(--red);
 }
 
 
@@ -249,6 +271,131 @@ a{
 .form-control.fblack::placeholder{
     color: #000 !important;
 }
+.collapse-terminales a{
+    text-decoration: none !important;
+    color: var(--dark1);
+}
+.collapse-terminales a[aria-expanded="true"]::after{
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;       
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Cpath fill='%231D1F24' d='M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 0 0 140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7'/%3E%3C/svg%3E");
+}
+.collapse-terminales a[aria-expanded="false"]::after{
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Cpath fill='%231D1F24' d='M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2L227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7'/%3E%3C/svg%3E");
+}
+.list-group-terminales{
+    background-color: #E3E7F2;
+    padding: 10px;
+}
+.list-group-terminales a{
+    background-color: transparent;
+    border: none !important;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 0 !important;
+    
+}.list-group-terminales a:hover{
+    background-color: var(--purple);    
+    color: var(--white);
+}
+
+
+/* Lightpicker */
+.litepicker {
+    display: block;
+}
+.litepicker .container__months {
+    display: flex;
+    flex-direction: column;
+}
+.month-item{
+    margin-bottom: 20px !important;
+}
+.container__months,
+.month-item-header,
+.month-item-weekdays-row,
+.container__days{
+    background-color: #F6F7FB !important;
+}
+.day-item{
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 18px;
+}
+.month-item-name, .month-item-year{
+    font-family: "montserrat", sans-serif !important;
+    font-size: 22px;
+}
+.month-item-weekdays-row div{
+    text-transform: uppercase;
+    color: #B5BAC7;
+}
+.litepicker .container__days .day-item.is-start-date,
+.litepicker .container__days .day-item.is-end-date {
+    background-color: #5F2167 !important;
+}
+.litepicker .container__days .day-item.is-in-range{
+    background-color: #E4DAE6 !important;
+}
+.no-servicio {
+    background: #ff4d4f !important;
+    color: white !important;
+    position: relative;
+}
+.no-servicio::after {
+    content: "No servicio";
+    position: absolute;
+    bottom: -18px;
+    font-size: 10px;
+    width: 100%;
+    text-align: center;
+}
+.list-group .list-group-item{
+    background-color: transparent !important;
+    padding: 0.3rem 1.25rem;
+    border: none;
+}
+.list-group .list-group-item:not(:last-child){
+    border-right: 1px solid #B5BAC7 !important; 
+}
+
+
+
+.fechas-viaje{
+    border: 1px solid #B9E9E4;
+    border-radius: 7px;
+    background-color: #F1F3F9;
+}
+.list-fechas-viaje li{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-right: 20px;
+}
+.list-fechas-viaje .square{
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+}
+.list-fechas-viaje li:nth-child(1) .square{
+    background: #258910;
+}.list-fechas-viaje li:nth-child(2) .square{
+    background: #D1820B;
+}.list-fechas-viaje li:nth-child(3) .square{
+    background: #D53711;
+}.list-fechas-viaje li:nth-child(4) .square{
+    background: #5F2167;
+}
+
 
 
 .mb-lg{
@@ -336,23 +483,6 @@ a{
 }
 .containerlg-trayecto .container-lg{
     background-color: #fff;
-}
-#corridas{
-    height: 770px;
-    overflow-y: scroll;
-}
-#corridas{
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
-}
-#corridas::-webkit-scrollbar { 
-    display: none;  /* Safari and Chrome */
-}
-#corridas .borders{
-    background-image: url("../images/line-border.png"), url("../images/line-border.png");
-    background-size: 1px 60%, 1px 60%;
-    background-repeat: no-repeat;
-    background-position: left center, right center;
 }
 
 @media(max-width: 992px){
