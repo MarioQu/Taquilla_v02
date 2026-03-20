@@ -38,7 +38,7 @@
             <div class="container-lg">
                 <div class="row">
                     <div class="col-12">
-                        <h1 class="titles40 fwhite text-left" data-aos="fade-right" data-aos-duration="2700">
+                        <h1 class="titles32 fwhite text-left" data-aos="fade-right" data-aos-duration="2700">
                             Compra tus boletos más rápido en el kiosko digital de ADO y vive una nueva experiencia.
                         </h1>
                     </div>
@@ -49,17 +49,17 @@
         <section class="container-fluid px-0" id="back-img-header"></section>
         
         <section class="container-fluid mt-4 mb-lg">
-            <div class="container-lg colcards shadow py-5 px-5">
+            <div class="container-lg colcards shadow py-3 px-5">
                 <h2 class="titles40 fblack text-center" data-aos="fade-down" data-aos-duration="1800">¿A dónde quieres viajar?</h2>
                 
-                <form action="" class="container whiteback shadow p-3 px-3 rounded-lg mt-3" id="form-origen-destino">
+                <form action="" class="container whiteback shadow p-3 px-3 rounded-lg mt-4" id="form-origen-destino">
                     <div class="form-group ida_regreso d-flex align-items-center" style="border: 5px solid #E9E9E9; border-radius: 4px;">
                         <div class="custom-control custom-radio pl-0">
-                            <input type="radio" id="ida_reg" name="customRadio" class="custom-control-input" checked>
+                            <input type="radio" id="ida_reg" name="customRadio" class="custom-control-input" value="ida_reg" checked>
                             <label class="custom-control-label w-100 py-1 label1" for="ida_reg">Ida y regreso</label>
-                        </div>
+                        </div>                        
                         <div class="custom-control custom-radio pl-0">
-                            <input type="radio" id="ida" name="customRadio" class="custom-control-input">
+                            <input type="radio" id="ida" name="customRadio" class="custom-control-input" value="ida">
                             <label class="custom-control-label w-100 py-1 label2" for="ida">Solo ida</label>
                         </div>
                     </div>
@@ -69,8 +69,9 @@
                             <div class="col">
                                 <label for="origen">Origen</label>
                                 <input type="text" class="form-control" placeholder="¿De dónde sales?" data-toggle="modal" data-target="#modalOrigen">
-                            </div>
+                            </div>                            
                             <div class="col">
+                                <img src="assets/images/cambio.png" style="position: absolute; left: -30px; top: 30px; z-index: 50;" alt="">
                                 <label for="destino">Destino</label>
                                 <input type="text" class="form-control" id="destino" placeholder="¿A dónde vas?" data-toggle="modal" data-target="#modalDestino">
                             </div>
@@ -94,17 +95,19 @@
                         </div>
                     </div>
                     
-                    <div class="form-group mt-5">
-                        <input type="submit" class="btn btn-gray2 w-100 py-4 titles24 shadow-none" value="Buscar Viaje">
+                    <div class="form-group mt-4">
+                        <a href="index2.html" type="submit" class="btn btn-gray2 w-100 py-4 txt24 shadow-none">
+                            Buscar Viaje
+                        </a>
                     </div>
                 </form>
                 
-                <div class="row mt-5">
-                    <div class="col-lg-4 px-4">
-                        <div class="card whiteback border-0 shadow mb-5" data-aos="zoom-in-left" data-aos-duration="1500">
+                <div class="row mt-3">
+                    <div class="col-4 px-3">
+                        <div class="card whiteback border-0 shadow mb-3">
                             <img src="assets/images/capu.png" class="card-img-top" alt="">
-                            <div class="card-body text-center px-5">
-                                <h5 class="titles24 fblack">Puebla, Capu</h5>
+                            <div class="card-body text-center px-3">
+                                <h5 class="titles19 fblack">Puebla, Capu</h5>
                                 <button type="button" class="btn btn-white btn-lg w-100 mt-3 shadow-none" data-toggle="modal" data-target="#modalViajantes">
                                     Comprar
                                 </button>
@@ -112,11 +115,11 @@
                         </div>
                     </div><!-- /.col-4 card --> 
                     
-                    <div class="col-lg-4 px-4">
-                        <div class="card whiteback border-0 shadow mb-5" data-aos="zoom-in-left" data-aos-duration="1800">
+                    <div class="col-4 px-3">
+                        <div class="card whiteback border-0 shadow mb-3" >
                             <img src="assets/images/oaxaca.png" class="card-img-top" alt="">
-                            <div class="card-body text-center px-5">
-                                <h5 class="titles24 fblack">Oaxaca</h5>
+                            <div class="card-body text-center px-3">
+                                <h5 class="titles19 fblack">Oaxaca</h5>
                                 <button type="button" class="btn btn-white btn-lg w-100 mt-3 shadow-none" data-toggle="modal" data-target="#modalViajantes">
                                     Comprar
                                 </button>
@@ -124,11 +127,11 @@
                         </div>
                     </div><!-- /.col-4 card --> 
                     
-                    <div class="col-lg-4 px-4">
-                        <div class="card whiteback border-0 shadow mb-5" data-aos="zoom-in-right" data-aos-duration="2100">
+                    <div class="col-4 px-3">
+                        <div class="card whiteback border-0 shadow mb-3">
                             <img src="assets/images/caxa.png" class="card-img-top" alt="">
-                            <div class="card-body text-center px-5">
-                                <h5 class="titles24 fblack">Xalapa, CAXA</h5>
+                            <div class="card-body text-center px-3">
+                                <h5 class="titles19 fblack">Xalapa, CAXA</h5>
                                 <button type="button" class="btn btn-white btn-lg w-100 mt-3 shadow-none" data-toggle="modal" data-target="#modalViajantes">
                                     Comprar
                                 </button>
@@ -136,11 +139,11 @@
                         </div>
                     </div><!-- /.col-4 card --> 
                     
-                    <div class="col-lg-4 px-4">
-                        <div class="card whiteback border-0 shadow mb-5" data-aos="zoom-in-right" data-aos-duration="2400">
+                    <div class="col-4 px-3">
+                        <div class="card whiteback border-0 shadow mb-3">
                             <img src="assets/images/tehuacan.png" class="card-img-top" alt="">
-                            <div class="card-body text-center px-5">
-                                <h5 class="titles24 fblack">Costa Esmeralda</h5>
+                            <div class="card-body text-center px-3">
+                                <h5 class="titles19 fblack">Costa Esmeralda</h5>
                                 <button type="button" class="btn btn-white btn-lg w-100 mt-3 shadow-none" data-toggle="modal" data-target="#modalViajantes">
                                     Comprar
                                 </button>
@@ -148,11 +151,11 @@
                         </div>
                     </div><!-- /.col-4 card --> 
                     
-                    <div class="col-lg-4 px-4">
-                        <div class="card whiteback border-0 shadow mb-5" data-aos="zoom-in-right" data-aos-duration="2400">
+                    <div class="col-4 px-3">
+                        <div class="card whiteback border-0 shadow mb-3">
                             <img src="assets/images/merida.svg" class="card-img-top" alt="">
-                            <div class="card-body text-center px-5">
-                                <h5 class="titles24 fblack">Mérida</h5>
+                            <div class="card-body text-center px-3">
+                                <h5 class="titles19 fblack">Mérida</h5>
                                 <button type="button" class="btn btn-white btn-lg w-100 mt-3 shadow-none" data-toggle="modal" data-target="#modalViajantes">
                                     Comprar
                                 </button>
@@ -160,11 +163,11 @@
                         </div>
                     </div><!-- /.col-4 card --> 
                     
-                    <div class="col-lg-4 px-4">
-                        <div class="card whiteback border-0 shadow mb-5" data-aos="zoom-in-right" data-aos-duration="2400">
+                    <div class="col-4 px-3">
+                        <div class="card whiteback border-0 shadow mb-3">
                             <img src="assets/images/veracruz.svg" class="card-img-top" alt="">
-                            <div class="card-body text-center px-5">
-                                <h5 class="titles24 fblack">Veracruz</h5>
+                            <div class="card-body text-center px-3">
+                                <h5 class="titles19 fblack">Veracruz</h5>
                                 <button type="button" class="btn btn-white btn-lg w-100 mt-3 shadow-none" data-toggle="modal" data-target="#modalViajantes">
                                     Comprar
                                 </button>
@@ -175,32 +178,32 @@
                 
                 <!-- Banner Promocional -->
                 <div class="row mt-5 py-4 px-4 banner_anuncio rounded-lg blackback">
-                    <div class="col-lg-1 d-flex align-items-center justify-content-start justify-content-md-start justify-content-lg-center p-0">
+                    <div class="col-1 d-flex align-items-center justify-content-start justify-content-md-start justify-content-lg-center p-0">
                         <img src="assets/images/escudo-ruta-cafe.png" class="img-fluid" alt="">
-                        <img src="assets/images/cafe.png" class="img-fluid d-lg-none img-abs2" alt="">
                     </div>
-                    <div class="col-lg-9 d-flex flex-column align-items-start justify-content-center">
-                        <h3 class="titles32 fwhite text-left">Ruta Café</h3>
-                        <p class="txt18 fwhite text-left mb-0 pb-0" data-aos="zoom-out-up" data-aos-duration="1500">
+                    <div class="col-9 d-flex flex-column align-items-start justify-content-center">
+                        <h3 class="titles30 fwhite text-left">Ruta Café</h3>
+                        <p class="txt14 fwhite text-left mb-0 pb-0">
                             Recuerda que si viajas en GL o Platino obtendrás un café gratis. 
                         </p>
                     </div>
-                    <div class="col-lg-2 d-none d-lg-block">
-                        <img src="assets/images/cafe.png" class="img-fluid img-abs" alt="" data-aos="fade-down" data-aos-duration="1700">
+                    <div class="col-2">
+                        <img src="assets/images/cafe.png" class="img-abs" alt="">
                     </div>
                 </div>
             </div>
         </section>
         
+        
         <!-- Modal Quiénes Viajan -->
         <div class="modal fade" id="modalViajantes" tabindex="-1" aria-labelledby="modalViajantesLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-dialog">
                 <div class="modal-content py-4 px-4">
                     <div class="modal-header justify-content-start">
-                        <div class="container">
+                        <div class="container-fluid">
                             <div class="row">
                                 <div class="col-4">
-                                    <button class="btn btn-white w-50 py-3 titles24 shadow-none d-flex align-items-center justify-content-center" data-dismiss="modal">
+                                    <button class="btn btn-white py-3 titles24 shadow-none d-flex align-items-center justify-content-center" data-dismiss="modal">
                                         <iconify-icon icon="ant-design:left-outlined"></iconify-icon> Regresar
                                     </button>
                                 </div>                                
@@ -215,27 +218,27 @@
                     <div class="modal-body pb-5">
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="col-12 col-lg-12 d-flex align-items-center justify-content-start">
-                                    <span class="titles32 fblack">Central México, Norte, CDMX</span>
-                                    <img src="assets/images/right.png" style="width: 20px;" class="mx-2" alt="">
-                                    <span class="titles32 fblack">Costa Esmeralda, Ver.</span>
+                                <div class="col-12 col-lg-12 ">
+                                    <span class="titles30 fblack">Central México, Norte, CDMX</span>
+                                    <img src="assets/images/right.png" style="width: 20px; margin-top: -10px;" class="mx-2" alt="">
+                                    <span class="titles30 fblack">Costa Esmeralda, Ver.</span>
                                 </div>
                                 <div class="col-12 col-lg-6 d-flex align-items-center justify-content-start">
-                                    <span class="txt24 fblack">Hoy - 26 de marzo .  21:30 h</span>
+                                    <span class="txt24 fblack">Vie. 12 mar. 2026 - Dom. 14 mar. 2026</span>
                                 </div>
                             </div>
                             
                             <div class="row mt-5">
                                 <div class="col-12">
                                     <div class="row">
-                                        <div class="col-lg-8 col-12 d-flex align-items-center justify-content-center justify-content-lg-start">
+                                        <div class="col-8 d-flex align-items-center justify-content-start">
                                             <img src="assets/images/iocono-viajeros.png" class="img-fluid float-left mr-3 icon-viajeros" alt="">
                                             <div>
                                                 <p class="titles32 fblack mb-0 pb-0 mb-n2">Adulto</p>
                                                 <span class="form-text text-muted">Más de 12 años</span>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 col-12 d-flex align-items-center justify-content-center justify-content-lg-end">
+                                        <div class="col-4 d-flex align-items-center justify-content-center justify-content-lg-end">
                                             <button class="btn btn-cant" id="dec_ad"></button>
                                             <form action="">
                                                 <input type="text" id="total_ad" class="titles40 form-control" readonly>
@@ -247,14 +250,14 @@
                                 
                                 <div class="col-12 mt-4">
                                     <div class="row">
-                                        <div class="col-lg-8 col-12 d-flex align-items-center justify-content-center justify-content-lg-start">
+                                        <div class="col-8 d-flex align-items-center justify-content-start">
                                             <img src="assets/images/viajeros-ninos.png" class="img-fluid float-left mr-3 icon-viajeros" alt="">
                                             <div>
                                                 <p class="titles32 fblack mb-0 pb-0 mb-n2">Niños</p>
                                                 <span class="form-text text-muted">De 5 a 12 años</span>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 col-12 d-flex align-items-center justify-content-center justify-content-lg-end">
+                                        <div class="col-4 d-flex align-items-center justify-content-center justify-content-lg-end">
                                             <button class="btn btn-cant" id="dec_ni"></button>
                                             <form action="">
                                                 <input type="text" id="total_ni" class="titles40 form-control" readonly>
@@ -266,14 +269,15 @@
                                 
                                 <div class="col-12 mt-4">
                                     <div class="row">
-                                        <div class="col-lg-8 col-12 d-flex align-items-center justify-content-center justify-content-lg-start">
+                                        <div class="col-8 d-flex align-items-center justify-content-start">
                                             <img src="assets/images/viajeros-inapam.png" class="img-fluid float-left mr-3 icon-viajeros" alt="">
                                             <div>
                                                 <p class="titles32 fblack mb-0 pb-0 mb-n2">INAPAM</p>
                                                 <span class="form-text text-muted">Con credencial vigente</span>
+                                                <a href="#" class="purple-link" data-toggle="modal" data-target="#modalInapam">Más información</a>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 col-12 d-flex align-items-center justify-content-center justify-content-lg-end">
+                                        <div class="col-4 d-flex align-items-center justify-content-center justify-content-lg-end">
                                             <button class="btn btn-cant shadow-none" id="dec_ina"></button>
                                             <form action="">
                                                 <input type="text" id="total_ina" class="titles40 form-control" readonly>
@@ -281,54 +285,16 @@
                                             <button class="btn btn-cant shadow-none" id="inc_ina"></button>
                                         </div>
                                     </div>
-                                </div><!-- /.col-12 INAPAM -->
-                                
-                                <div class="col-12 mt-4">
-                                    <div class="row">
-                                        <div class="col-lg-8 col-12 d-flex align-items-center justify-content-center justify-content-lg-start">
-                                            <img src="assets/images/viajeros-estudiantes.png" class="img-fluid float-left mr-3 icon-viajeros" alt="">
-                                            <div>
-                                                <p class="titles32 fblack mb-0 pb-0 mb-n2">Estudiantes</p>
-                                                <span class="form-text text-muted">Con credencial vigente</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-12 d-flex align-items-center justify-content-center justify-content-lg-end">
-                                            <button class="btn btn-cant shadow-none" id="dec_est"></button>
-                                            <form action="">
-                                                <input type="text" id="total_est" class="titles40 form-control" readonly>
-                                            </form>
-                                            <button class="btn btn-cant shadow-none" id="inc_est"></button>
-                                        </div>
-                                    </div>
-                                </div><!-- /.col-12 Estudiantes -->
-                                
-                                <div class="col-12 mt-4">
-                                    <div class="row">
-                                        <div class="col-lg-8 col-12 d-flex align-items-center justify-content-center justify-content-lg-start">
-                                            <img src="assets/images/viajeros-maestros.png" class="img-fluid float-left mr-3 icon-viajeros" alt="">
-                                            <div>
-                                                <p class="titles32 fblack mb-0 pb-0 mb-n2">Maestros</p>
-                                                <span class="form-text text-muted">Con credencial vigente</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-12 d-flex align-items-center justify-content-center justify-content-lg-end">
-                                            <button class="btn btn-cant shadow-none" id="dec_mae"></button>
-                                            <form action="">
-                                                <input type="text" id="total_mae" class="titles40 form-control" readonly>
-                                            </form>
-                                            <button class="btn btn-cant shadow-none" id="inc_mae"></button>
-                                        </div>
-                                    </div>
-                                </div><!-- /.col-12 Maestros -->
+                                </div><!-- /.col-12 INAPAM -->                                                                
                             </div>
                         </div>
                     </div>
-                    <div class="modal-footer">
+                    <div class="modal-footer border-0">
                         <div class="row">
-                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-2 mb-sm-2 mb-md-2 mb-lg-0">
+                            <div class="col-6 mb-2 mb-sm-2 mb-md-2 mb-lg-0">
                                 <button type="button" class="btn btn-lg btn-white py-3 shadow-none" data-dismiss="modal">Regresar</button>
                             </div>
-                            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                            <div class="col-6">
                                 <a href="#" type="button" class="btn btn-lg btn-purple py-3 shadow-none" data-dismiss="modal">Continuar</a>
                             </div>
                         </div>
@@ -341,13 +307,13 @@
         
         <!-- Modal Origen -->
         <div class="modal fade" id="modalOrigen" tabindex="-1" aria-labelledby="modalOrigenLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false" >
-            <div class="modal-dialog modal-xl">
+            <div class="modal-dialog">
                 <div class="modal-content">                   
                     <div class="modal-body">
-                        <div class="container">
+                        <div class="container-fluid">
                             <div class="row">
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-3 mb-sm-0 mb-md-0 mb-lg-0">
-                                    <button class="btn btn-white w-50 py-3 titles24 shadow-none d-flex align-items-center justify-content-center" data-dismiss="modal">
+                                <div class="col-6 mb-3 mb-sm-0 mb-md-0 mb-lg-0">
+                                    <button class="btn btn-white py-3 titles24 shadow-none d-flex align-items-center justify-content-center" data-dismiss="modal">
                                         <iconify-icon icon="ant-design:left-outlined"></iconify-icon> Regresar
                                     </button>
                                 </div>
@@ -715,15 +681,15 @@
                     </div><!-- /.modal-body -->
                     
                     <div class="modal-footer pt-4 border-0">
-                        <div class="container">
+                        <div class="container-fluid">
                             <div class="row">
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-3 mb-sm-0 mb-md-0 mb-lg-0">
-                        <button class="btn btn-white w-100 py-4 titles24 shadow-none" data-dismiss="modal">Regresar</button>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-                        <button class="btn btn-gray w-100 py-4 titles24 shadow-none">Aceptar</button>
-                    </div>
-                </div>
+                                <div class="col-6 mb-3">
+                                    <button class="btn btn-white w-100 py-3 titles24 shadow-none" data-dismiss="modal">Regresar</button>
+                                </div>
+                                <div class="col-6">
+                                    <button class="btn btn-gray w-100 py-3 titles24 shadow-none" data-dismiss="modal">Aceptar</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -733,13 +699,13 @@
         
         <!-- Modal Destino -->
         <div class="modal fade" id="modalDestino" tabindex="-1" aria-labelledby="modalDestinoLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false" >
-            <div class="modal-dialog modal-xl">
+            <div class="modal-dialog">
                 <div class="modal-content">                   
                     <div class="modal-body">
-                        <div class="container">
+                        <div class="container-fluid">
                              <div class="row">
-                                <div class="col-12">
-                                    <button class="btn btn-white w-50 py-3 titles24 shadow-none d-flex align-items-center justify-content-center" data-dismiss="modal">
+                                <div class="col-6 mb-3 mb-sm-0 mb-md-0 mb-lg-0">
+                                    <button class="btn btn-white py-3 titles24 shadow-none d-flex align-items-center justify-content-center" data-dismiss="modal">
                                         <iconify-icon icon="ant-design:left-outlined"></iconify-icon> Regresar
                                     </button>
                                 </div>
@@ -918,13 +884,13 @@
                     </div><!-- /.modal-body -->
                     
                     <div class="modal-footer pt-4 border-0">
-                        <div class="container">
+                        <div class="container-fluid">
                             <div class="row">
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-3 mb-sm-0 mb-md-0 mb-lg-0">
-                                    <button class="btn btn-white w-100 py-4 titles24 shadow-none" data-dismiss="modal">Regresar</button>
+                                <div class="col-6 mb-3 mb-sm-0 mb-md-0 mb-lg-0">
+                                    <button class="btn btn-white w-100 py-3 titles24 shadow-none" data-dismiss="modal">Regresar</button>
                                 </div>
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-                                    <button class="btn btn-gray w-100 py-4 titles24 shadow-none">Aceptar</button>
+                                <div class="col-6">
+                                    <button class="btn btn-gray w-100 py-3 titles24 shadow-none" data-dismiss="modal">Aceptar</button>
                                 </div>
                             </div>
                         </div>
@@ -936,13 +902,13 @@
         
         <!-- Modal Fecha Viaje -->
         <div class="modal fade" id="modalFechaViaje" tabindex="-1" aria-labelledby="modalFechaViajeLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false" >
-            <div class="modal-dialog modal-xl">
+            <div class="modal-dialog">
                 <div class="modal-content">                   
                     <div class="modal-body">
-                        <div class="container">
+                        <div class="container-fluid">
                             <div class="row">
-                                <div class="col-4">
-                                    <button class="btn btn-white w-50 py-3 titles24 shadow-none d-flex align-items-center justify-content-center" data-dismiss="modal">
+                                <div class="col-4 mb-3 mb-sm-0 mb-md-0 mb-lg-0">
+                                    <button class="btn btn-white py-3 titles24 shadow-none d-flex align-items-center justify-content-center" data-dismiss="modal">
                                         <iconify-icon icon="ant-design:left-outlined"></iconify-icon> Regresar
                                     </button>
                                 </div>
@@ -952,7 +918,7 @@
                             <div class="row mt-4">
                                 <div class="col-12 d-flex align-items-center justify-content-center pb-4" data-aos="fade-down" data-aos-duration="1400" style="border-bottom: 1px solid #E3E7F2;">
                                     <span class="fblack titles32">Selecciona la fecha de tu viaje</span>
-                                    <hr class="mt-2">                                                                                                            
+                                    <hr class="mt-2">                         
                                 </div>
                                 
                                 <div class="col-12 mt-3">
@@ -970,14 +936,14 @@
                             </div><!-- /.row -->
                             
                             <div class="row">
-                                <div class="col-12" style="background-color: #F6F7FB;">
+                                <div class="col-12 py-2" style="background-color: #F6F7FB;">
                                     <form action="" class="text-center">
                                         <div id="calendario"></div>
                                     </form>
                                 </div>
                             </div>
                             
-                            <div class="row mt-4">
+                            <div class="row mt-3">
                                 <div class="col-12 fechas-viaje p-2">
                                     <ul class="p-0 m-0 list-fechas-viaje d-flex align-items-center justify-content-start">
                                         <li><div class="square"></div> Descuento</li>
@@ -988,7 +954,7 @@
                                 </div>
                             </div>
                             
-                            <div class="row mt-4">
+                            <div class="row mt-3">
                                 <div class="col-12">
                                     <form action="">
                                         <div class="form-group form-check">
@@ -1001,17 +967,64 @@
                         </div>
                     </div><!-- /.modal-body -->
                     
-                    <div class="modal-footer pt-4 border-0">
-                        <div class="container">
+                    <div class="modal-footer pt-2 border-0">
+                        <div class="container-fluid">
                             <div class="row">
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-3 mb-sm-0 mb-md-0 mb-lg-0">
-                                    <button class="btn btn-white w-100 py-4 titles24 shadow-none" data-dismiss="modal">Regresar</button>
+                                <div class="col-6 mb-3 mb-sm-0 mb-md-0 mb-lg-0">
+                                    <button class="btn btn-white w-100 py-3 titles24 shadow-none" data-dismiss="modal">Regresar</button>
                                 </div>
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-                                    <button class="btn btn-gray w-100 py-4 titles24 shadow-none">Aceptar</button>
+                                <div class="col-6">
+                                    <button class="btn btn-gray w-100 py-3 titles24 shadow-none" data-dismiss="modal">Aceptar</button>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- Modal INAPAM -->
+        <div class="modal fade" id="modalInapam" tabindex="-1" aria-labelledby="modalInapamLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content py-4 px-4">
+                    <div class="modal-header justify-content-start">                       
+                        <div class="row mt-4 w-100">
+                            <div class="col-12 d-flex align-items-center justify-content-between">
+                                <h5 class="text-left titles32 fblack" id="modalInapamLabel">¿Qué es el INAPAM?</h5>      
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <div class="container-fluid">                            
+                            <div class="row" style="margin-top: 100px;">
+                                <div class="col-12">
+                                    <p class="txt24 fblack text-left">
+                                        Si tienes tu credencial INAPAM aprovecha el 50% de descuento que ADO te ofrece:
+                                    </p>
+                                    <p class="txt24 fblack text-left">
+                                        a) Es necesario presentar su credencial original del INAPAM (antes INSEN) o una identificación oficial: Credencial de elector original INE o pasaporte original vigente o alguna identificación oficial que lo acredite que es mayor de 60 años para obtener su descuento.
+                                    </p>
+                                    <p class="txt24 fblack text-left">
+                                        b) Limitado a 2 descuentos por autobús en corridas normales en todas nuestras marcas y clases de servicio conforme al DOF de 07/01/1982.
+                                    </p>
+                                    <p class="txt24 fblack text-left">
+                                        Recuerda que al momento de abordar deberás presentar tu boleto electrónico, Identificación Oficial y credencial de INAPAM vigente; de lo contrario no podrás realizar tu viaje.
+                                    </p>
+                                    <p class="txt24 fblack text-left">
+                                        No es acumulable con otros descuentos
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-footer border-0">
+                        <button type="button" class="btn btn-purple w-100 py-3" data-dismiss="modal">Aceptar</button>
                     </div>
                 </div>
             </div>
@@ -1023,6 +1036,17 @@
        
         <script>
             AOS.init();
+            
+            /* ********** Radios Ida y regreso ********** */
+            var valor= $("input[name=customRadio]:checked").val();
+            
+            if(valor == "ida_reg"){
+                $(".label1").addClass("fwhite");
+            }else{
+                $(".label2").addClass("fwhite");
+            }
+ 
+            
             
             /* ********** Lightpicker ********** */
             new Litepicker({
@@ -1067,17 +1091,7 @@
                 $("#total_est").val(total_est); 
                 $("#total_mae").val(total_mae); 
                 
-                
-                /* *******************************
-                    Aplica un color blanco al texto en los radios ida/regreso 
-                */
-            //    if($("#ida_reg").is(":checked")){
-            //         $(".label1").addClass("fwhite");
-            //     }
-            //     if($("#ida").is(":checked")){
-            //         $(".label2").addClass("fwhite");
-            //     }
-                
+               
                 
                 /* *******************************
                     Deshabilitar botón de menos(-) cuando la cantidad de boletos llega a cero 

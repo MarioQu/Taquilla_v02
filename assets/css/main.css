@@ -37,10 +37,25 @@ a{
     font-weight: 700;
     font-size: 18px;
 }
+.titles19{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 19px;
+}
+.titles20{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
 .titles24{
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-size: 24px;
+}
+.titles30{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
 }
 .titles32{
     font-family: "Montserrat", sans-serif;
@@ -143,6 +158,9 @@ a{
 .f400{
     font-weight: 400;
 }
+.f500{
+    font-weight: 500;
+}
 .f700{
     font-weight: 700;
 }
@@ -152,10 +170,15 @@ a{
     border: 1px solid #B9E9E4 !important;
 }
 
+.list-noicon{
+    list-style: none;
+    padding-left: 0;
+}
+
 /* ---------- Botones ---------- */
 .btn-lang{
     width: 190px;
-    height: 65px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -182,7 +205,7 @@ a{
 .btn-white2:hover{
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15);
     background-color: var(--purple);
-    border: 1px solid var(--white);
+    border: 1px solid var(--purple);
     color: var(--white);
 }
 
@@ -220,10 +243,34 @@ a{
     color: var(--red);
 }
 
+.btn-corridas{
+    font-size: 14px;
+}
+
+.modal-dialog{
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    max-height: 100% !important;
+    margin: 0 auto;
+}
+.modal-content{
+    height: 100% !important;
+    border-radius: 0 !important;
+}
+.close {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
 
 /* **************************************  
                 Home 
 ************************************** */
+input, .form-control, label, .custom-control-input, .custom-control-label{
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
 #back-img-header{
     background-color: var(--red);
     position: absolute;
@@ -236,10 +283,12 @@ a{
 .ida_regreso .custom-radio{
     width: 50%;
     text-align: center;
+    box-shadow: none !important;
+    text-shadow: none !important;
 }
 .ida_regreso label{
     font-weight: 500;
-    color: #959DB6;
+    /* color: #959DB6; */
 }
 .ida_regreso .custom-radio .custom-control-label::before {
     border-radius: 0;
@@ -305,8 +354,8 @@ a{
     border-radius: 0 !important;
     
 }.list-group-terminales a:hover{
-    background-color: var(--purple);    
-    color: var(--white);
+    background-color: var(--purple) !important;    
+    color: var(--white) !important;
 }
 
 
@@ -398,20 +447,18 @@ a{
 
 
 
-.mb-lg{
+/* .mb-lg{
     margin-bottom: 200px;
-}
+} */
 .colcards{
     background-color: rgba(255, 255, 255, .8);
     border-radius: 24px;
 }
 .banner_anuncio .img-abs{
     position: absolute;
-    bottom: 0;
-}.banner_anuncio .img-abs2{
-    position: absolute;
-    bottom: -10px;
-    right: -40px;
+    top: -50px;
+    right: -30px;
+    width: 150px;
 }
 /* #modalViajantes .modal-dialog-centered .modal-dialog, 
 #modalViajantes .modal-dialog-centered.modal-dialog {
@@ -474,18 +521,47 @@ a{
 /* **************************************  
             Pantalla corridas 
 ************************************** */
+.corridasBox-top{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}.corridasBox-bottom{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.list-group .list-group-item:not(:last-child) {
+    border-right: none !important;
+}.list-group .list-group-item:not(:last-child) {
+    background-image: url("../images/line-border.png");
+    background-size: 1px 50%;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
 #estatus_corrida{
     border-bottom: 2px solid #B5BAC7;
     background-color: #ECEFF6;
 }
-.containerlg-trayecto{
+/* .containerlg-trayecto{
     background-color: #F4F6F9;
-}
-.containerlg-trayecto .container-lg{
+} */
+/* .containerlg-trayecto .container-lg{
     background-color: #fff;
+} */
+
+#corridas{
+    height: 1000px;
+    overflow-y: scroll;
+}
+#corridas{
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+#corridas::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
 }
 
-@media(max-width: 992px){
+/* @media(max-width: 992px){
     #estatus_corrida .separador{
         width: 30px;                
     }
@@ -494,10 +570,10 @@ a{
     #corridas .borders{
         background: none !important;
     }
-}
+} */
 #estatus_corrida .borderleft{
     background-image: url("../images/line-border.png");
-    background-size: 1px 100%;
+    background-size: 1px 70%;
     background-repeat: no-repeat;
     background-position: left center;
 }
@@ -541,10 +617,22 @@ a{
     height: 2rem;
 }
 
+.navs-purple li button{
+    font-weight: 700;
+    color: #959DB6;
+    font-size: 24px;
+}
+.navs-purple .nav-link.active, 
+.navs-purple .show>.nav-link {
+    color: var(--purple);
+    background-color: var(--white);
+    border-bottom: 3px solid var(--purple);
+}
+
 /* **************************************  
             Pantalla Pago 
 ************************************** */
-@media(min-width: 768px) and (orientation: portrait){
+/* @media(min-width: 768px) and (orientation: portrait){
     #footer-pago{
         position: fixed;
         bottom: 0;
@@ -555,7 +643,7 @@ a{
         position: fixed;
         bottom: 0;
     }
-}
+} */
 
 
 /* **************************************  
