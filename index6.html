@@ -15,6 +15,8 @@
     </head>
     
     <body>
+        <audio src="assets/audios/asientos-ida.mp3" autoplay id="asientos-ida"></audio>
+        
         <section class="container-lg px-5" style="background-color: #F1F3F9;">
             <div class="row pt-4 pb-3">
                 <div class="col-4">
@@ -65,165 +67,191 @@
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="boletos-tab-pane" role="tabpanel" aria-labelledby="boletos-tab" tabindex="0">
                             <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-12 px-5 py-4" style="background-color: #F1F3F9;">
-                                        <div class="row pt-3 faback" style="background-color: #F1F3F9;">
+                                <div class="row px-4" style="overflow: scroll; height: 1150px;">
+                                    <div class="col-12 shadow mt-4 pt-2">
+                                        <div class="row whiteback pb-4 corridasBox-top">
+                                            <div class="col-2 d-flex align-items-center justify-content-center">
+                                                <img src="assets/images/ADO.svg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="col-10 border-lx">
+                                                <div class="row">
+                                                    <div class="col-12 d-flex align-items-center justify-content-between">
+                                                        <p class="f-20 fw-700 m-0 p-0">06:00 h</p>
+                                                        <p class="f-12 fdark1 m-0 p-0">3h 10min. aprox. </p>
+                                                        <p class="f-20 fw-700 m-0 p-0">08:10 h</p>
+                                                    </div>
+                                                    <div class="col-12 d-flex align-items-center justify-content-between">
+                                                        <p class="f-12 fw-500 pb-0 mb-0">Central México norte, CDMX</p>
+                                                        <p class="f-12 fw-500 pb-0 mb-0">Apan, Hgo.</p>
+                                                    </div>
+                                                </div>
+                                            </div>              
+                                        </div><!-- /row corridas -->
+                                        
+                                        <div class="row p-3 rounded-lg" style="border-top: 3px solid #FAFAFA;">
                                             <div class="col-12">
-                                                <h5 class="fw-600 f-24">Enviar boleto(s) a</h5>
-                                            </div>
-                                            <div class="col-12 mt-3 faback shadow rad16">
-                                                <form action="" class="">
-                                                    <div class="row px-3 py-4">                                        
-                                                        <div class="col-6">
-                                                            <label for="email" class="txt16 mb-1 f500">Correo electrónico o celular</label>
-                                                            <input type="email" class="form-control fblack txt18 shadow-none" id="email" placeholder="Ej: mario@correo.com ó 5512234556">
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <label for="email" class="txt16 mb-1 f500">Confirmar Correo electrónico o celular</label>
-                                                            <input type="email" class="form-control fblack txt18 shadow-none" id="email" placeholder="Ej: mario@correo.com ó 5512234556">
-                                                        </div>                                                                    
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <h5 class="f-24 txt-start fw-700 p-0 m-0">Elige tu(s) asiento(s) de ida</h5>
                                                     </div>
-                                                </form>
+                                                    <div class="col-6 text-end">
+                                                        <p class="fw-700 f-purple f-24 m-0 p-0">Lunes 23 de Marzo</p>
+                                                    </div>
+                                                </div>                                                                                
                                             </div>
                                         </div>
-                                    </div><!-- col-12 enviar boletos -->
+                                        
+                                        <div class="row mx-3">
+                                            <div class="col-8 py-3">
+                                                <div class="d-flex align-items-center justify-content-start">
+                                                    <div class="d-flex align-items-center justify-content-start me-4" data-aos="fade-down" data-aos-duration="1400">
+                                                        <div class="bullets-asientos disp me-2"></div> <span class="fw-500 f-14">Disponible</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center justify-content-start me-4" data-aos="fade-up" data-aos-duration="1700">
+                                                        <div class="bullets-asientos nodisp me-2"></div> <span class="fw-500 f-14">No disponible</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center justify-content-start" data-aos="fade-down" data-aos-duration="2000">
+                                                        <div class="bullets-asientos select me-2"></div> <span class="fw-500 f-14">Seleccionado</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-4 d-flex align-items-center justify-content-end">
+                                                <img src="assets/images/iconos-logos/check-off.svg" alt="">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row mx-3">
+                                            <div class="col-12">
+                                                <img src="assets/images/autobus.svg" class="img-fluid w-100" alt="">
+                                            </div>
+                                        </div>
+                                    </div><!-- main col-12 -->
                                     
-                                    <div class="col-12 px-5 py-4" style="background-color: #F1F3F9; height: 900px; overflow: scroll;">
-                                        <div class="row pt-3 faback" style="background-color: #F1F3F9;">
-                                            <div class="col-6">
-                                                <h5 class="fw-600 f-24">Registra pasajero(s)</h5>
+                                    <div class="col-12 shadow mt-5 pt-2" style="position: relative;">
+                                        <div style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; width: 100%; height: 100%; z-index: 9999; background-color: rgba(255, 255, 255, .7);"></div>
+                                        
+                                        <div class="row whiteback pb-4 corridasBox-top">
+                                            <div class="col-2 d-flex align-items-center justify-content-center">
+                                                <img src="assets/images/iconos-logos/logo-au.png" alt="" class="img-fluid">
                                             </div>
-                                            <div class="col-6 text-end">
-                                                <a href="" data-bs-toggle="modal" data-bs-target="#modalAsistencia" class="f-18 fw-500 f-green2 d-flex align-items-center justify-content-end">
-                                                    ¿Qué es la asistencia total? <img src="assets/images/info.png" class="img-fluid" alt=""> <img src="assets/images/iconos-logos/info.png" alt="" class="ms-2">
-                                                </a>
+                                            <div class="col-10 border-lx">
+                                                <div class="row">
+                                                    <div class="col-12 d-flex align-items-center justify-content-between">
+                                                        <p class="f-20 fw-700 m-0 p-0">06:00 h</p>
+                                                        <p class="f-12 fdark1 m-0 p-0">3h 10min. aprox. </p>
+                                                        <p class="f-20 fw-700 m-0 p-0">08:10 h</p>
+                                                    </div>
+                                                    <div class="col-12 d-flex align-items-center justify-content-between">
+                                                        <p class="f-12 fw-500 pb-0 mb-0">Central México norte, CDMX</p>
+                                                        <p class="f-12 fw-500 pb-0 mb-0">Apan, Hgo.</p>
+                                                    </div>
+                                                </div>
+                                            </div>              
+                                        </div><!-- /row corridas -->
+                                        
+                                        <div class="row p-3 rounded-lg" style="border-top: 3px solid #FAFAFA;">
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <h5 class="f-24 txt-start fw-700 p-0 m-0">Elige tu(s) asiento(s) de ida</h5>
+                                                    </div>
+                                                    <div class="col-6 text-end">
+                                                        <p class="fw-700 f-purple f-24 m-0 p-0">Lunes 23 de Marzo</p>
+                                                    </div>
+                                                </div>                                                                                
                                             </div>
-                                            <div class="col-12 mt-3 faback shadow rad16">
-                                                <form action="" class="">
-                                                    <div class="row px-3 py-4">  
-                                                        <div class="col-12">
-                                                            <p class="p-0 m-0 f-30 fw-700">Pasajero 1: Adulto</p>
-                                                            <hr style="border-top: 2px solid #E3E7F2;">
-                                                        </div>                                      
-                                                        <div class="col-6">
-                                                            <label for="nombre" class="txt16 mb-1 fw-400">Nombre (s)</label>
-                                                            <input type="text" class="form-control f-18 shadow-none" id="nombre" placeholder="Ej: María">                
-                                                            <div class="form-check mt-3">
-                                                                <input class="form-check-input" type="checkbox" value="" id="checkDefault" checked>
-                                                                <label class="form-check-label fw-500 fblack" for="checkDefault">
-                                                                    Asistencia total de ida <span class="f-purple fw-700">$1,500 MXN</span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <label for="apellido" class="txt16 mb-1 fw-400">Apellido (s)</label>
-                                                            <input type="text" class="form-control fblack txt18 shadow-none" id="apellido" placeholder="Ej: García López">
-                                                            <div class="form-check mt-3">
-                                                                <input class="form-check-input" type="checkbox" value="" id="checkDefault" checked>
-                                                                <label class="form-check-label fw-500 fblack" for="checkDefault">
-                                                                    Asistencia total de regreso <span class="f-purple fw-700">$1,500 MXN</span>
-                                                                </label>
-                                                            </div>
-                                                        </div>                                                                    
-                                                    </div>
-                                                </form>
-                                            </div><!-- pasajero -->
-                                            
-                                            <div class="col-12 mt-5 faback shadow rad16">
-                                                <form action="" class="">
-                                                    <div class="row px-3 py-4">  
-                                                        <div class="col-12">
-                                                            <p class="p-0 m-0 f-30 fw-700">Pasajero 2: Niño</p>
-                                                            <hr style="border-top: 2px solid #E3E7F2;">
-                                                        </div>                                      
-                                                        <div class="col-6">
-                                                            <label for="nombre" class="txt16 mb-1 fw-400">Nombre (s)</label>
-                                                            <input type="text" class="form-control f-18 shadow-none" id="nombre" placeholder="Ej: María">                
-                                                            <div class="form-check mt-3">
-                                                                <input class="form-check-input" type="checkbox" value="" id="checkDefault" checked>
-                                                                <label class="form-check-label fw-500 fblack" for="checkDefault">
-                                                                    Asistencia total de ida <span class="f-purple fw-700">$1,500 MXN</span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <label for="apellido" class="txt16 mb-1 fw-400">Apellido (s)</label>
-                                                            <input type="text" class="form-control fblack txt18 shadow-none" id="apellido" placeholder="Ej: García López">
-                                                            <div class="form-check mt-3">
-                                                                <input class="form-check-input" type="checkbox" value="" id="checkDefault" checked>
-                                                                <label class="form-check-label fw-500 fblack" for="checkDefault">
-                                                                    Asistencia total de regreso <span class="f-purple fw-700">$1,500 MXN</span>
-                                                                </label>
-                                                            </div>
-                                                        </div>                                                                    
-                                                    </div>
-                                                </form>
-                                            </div><!-- pasajero -->
-                                            
-                                            <div class="col-12 mt-5 faback shadow rad16">
-                                                <form action="" class="">
-                                                    <div class="row px-3 py-4">  
-                                                        <div class="col-12">
-                                                            <p class="p-0 m-0 f-30 fw-700">Pasajero 3: INAPAM</p>
-                                                            <hr style="border-top: 2px solid #E3E7F2;">
-                                                        </div>                                      
-                                                        <div class="col-6">
-                                                            <label for="nombre" class="txt16 mb-1 fw-400">Nombre (s)</label>
-                                                            <input type="text" class="form-control f-18 shadow-none" id="nombre" placeholder="Ej: María">                
-                                                            <div class="form-check mt-3">
-                                                                <input class="form-check-input" type="checkbox" value="" id="checkDefault" checked>
-                                                                <label class="form-check-label fw-500 fblack" for="checkDefault">
-                                                                    Asistencia total de ida <span class="f-purple fw-700">$1,500 MXN</span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <label for="apellido" class="txt16 mb-1 fw-400">Apellido (s)</label>
-                                                            <input type="text" class="form-control fblack txt18 shadow-none" id="apellido" placeholder="Ej: García López">
-                                                            <div class="form-check mt-3">
-                                                                <input class="form-check-input" type="checkbox" value="" id="checkDefault" checked>
-                                                                <label class="form-check-label fw-500 fblack" for="checkDefault">
-                                                                    Asistencia total de regreso <span class="f-purple fw-700">$1,500 MXN</span>
-                                                                </label>
-                                                            </div>
-                                                        </div>                                                                    
-                                                    </div>
-                                                </form>
-                                            </div><!-- pasajero -->
-                                            
-                                            <div class="col-12 mt-5 faback shadow rad16">
-                                                <form action="" class="">
-                                                    <div class="row px-3 py-4">  
-                                                        <div class="col-12">
-                                                            <p class="p-0 m-0 f-30 fw-700">Pasajero 4: INAPAM</p>
-                                                            <hr style="border-top: 2px solid #E3E7F2;">
-                                                        </div>                                      
-                                                        <div class="col-6">
-                                                            <label for="nombre" class="txt16 mb-1 fw-400">Nombre (s)</label>
-                                                            <input type="text" class="form-control f-18 shadow-none" id="nombre" placeholder="Ej: María">                
-                                                            <div class="form-check mt-3">
-                                                                <input class="form-check-input" type="checkbox" value="" id="checkDefault" checked>
-                                                                <label class="form-check-label fw-500 fblack" for="checkDefault">
-                                                                    Asistencia total de ida <span class="f-purple fw-700">$1,500 MXN</span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <label for="apellido" class="txt16 mb-1 fw-400">Apellido (s)</label>
-                                                            <input type="text" class="form-control fblack txt18 shadow-none" id="apellido" placeholder="Ej: García López">
-                                                            <div class="form-check mt-3">
-                                                                <input class="form-check-input" type="checkbox" value="" id="checkDefault" checked>
-                                                                <label class="form-check-label fw-500 fblack" for="checkDefault">
-                                                                    Asistencia total de regreso <span class="f-purple fw-700">$1,500 MXN</span>
-                                                                </label>
-                                                            </div>
-                                                        </div>                                                                    
-                                                    </div>
-                                                </form>
-                                            </div><!-- pasajero -->
                                         </div>
-                                    </div><!-- col-12 enviar boletos -->
-                                </div>
+                                        
+                                        <div class="row mx-3">
+                                            <div class="col-8 py-3">
+                                                <div class="d-flex align-items-center justify-content-start">
+                                                    <div class="d-flex align-items-center justify-content-start me-4" data-aos="fade-down" data-aos-duration="1400">
+                                                        <div class="bullets-asientos disp me-2"></div> <span class="fw-500 f-14">Disponible</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center justify-content-start me-4" data-aos="fade-up" data-aos-duration="1700">
+                                                        <div class="bullets-asientos nodisp me-2"></div> <span class="fw-500 f-14">No disponible</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center justify-content-start" data-aos="fade-down" data-aos-duration="2000">
+                                                        <div class="bullets-asientos select me-2"></div> <span class="fw-500 f-14">Seleccionado</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-4 d-flex align-items-center justify-content-end">
+                                                <img src="assets/images/iconos-logos/check-off.svg" alt="">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row mx-3">
+                                            <div class="col-12">
+                                                <img src="assets/images/autobus.svg" class="img-fluid w-100" alt="">
+                                            </div>
+                                        </div>
+                                    </div><!-- main col-12 -->
+                                    
+                                    <div class="col-12 shadow mt-5 pt-2" style="position: relative;">
+                                        <div style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; width: 100%; height: 100%; z-index: 9999; background-color: rgba(255, 255, 255, .7);"></div>
+                                        
+                                        <div class="row whiteback pb-4 corridasBox-top">
+                                            <div class="col-2 d-flex align-items-center justify-content-center">
+                                                <img src="assets/images/ADO.svg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="col-10 border-lx">
+                                                <div class="row">
+                                                    <div class="col-12 d-flex align-items-center justify-content-between">
+                                                        <p class="f-20 fw-700 m-0 p-0">06:00 h</p>
+                                                        <p class="f-12 fdark1 m-0 p-0">3h 10min. aprox. </p>
+                                                        <p class="f-20 fw-700 m-0 p-0">08:10 h</p>
+                                                    </div>
+                                                    <div class="col-12 d-flex align-items-center justify-content-between">
+                                                        <p class="f-12 fw-500 pb-0 mb-0">Central México norte, CDMX</p>
+                                                        <p class="f-12 fw-500 pb-0 mb-0">Apan, Hgo.</p>
+                                                    </div>
+                                                </div>
+                                            </div>              
+                                        </div><!-- /row corridas -->
+                                        
+                                        <div class="row p-3 rounded-lg" style="border-top: 3px solid #FAFAFA;">
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <h5 class="f-24 txt-start fw-700 p-0 m-0">Elige asiento(s) de regreso</h5>
+                                                    </div>
+                                                    <div class="col-6 text-end">
+                                                        <p class="fw-700 f-purple f-24 m-0 p-0">Lunes 23 de Marzo</p>
+                                                    </div>
+                                                </div>                                                                                
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row mx-3">
+                                            <div class="col-8 py-3">
+                                                <div class="d-flex align-items-center justify-content-start">
+                                                    <div class="d-flex align-items-center justify-content-start me-4" data-aos="fade-down" data-aos-duration="1400">
+                                                        <div class="bullets-asientos disp me-2"></div> <span class="fw-500 f-14">Disponible</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center justify-content-start me-4" data-aos="fade-up" data-aos-duration="1700">
+                                                        <div class="bullets-asientos nodisp me-2"></div> <span class="fw-500 f-14">No disponible</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center justify-content-start" data-aos="fade-down" data-aos-duration="2000">
+                                                        <div class="bullets-asientos select me-2"></div> <span class="fw-500 f-14">Seleccionado</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-4 d-flex align-items-center justify-content-end">
+                                                <img src="assets/images/iconos-logos/check-off.svg" alt="">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row mx-3">
+                                            <div class="col-12">
+                                                <img src="assets/images/autobus.svg" class="img-fluid w-100" alt="">
+                                            </div>
+                                        </div>
+                                    </div><!-- main col-12 -->
+                                </div><!-- main-row-->
                             </div>
                         </div><!-- boletos-pane -->
                         
@@ -245,7 +273,7 @@
         
         <footer class="fixed-bottom pb-3" style="background-color: #F1F3F9;">
             <div class="container-fluid">
-                <div class="row green-div2 py-4 px-3" data-bs-toggle="modal" data-bs-target="#ModalTotal" style="cursor: pointer;">
+                <div class="row green-div2 py-4 px-3">
                     <div class="col">
                         <span class="fblack f-28 fw-700">Total</span>
                         <span class="fblack f-14 fw-400">(Incluye IVA)</span>
@@ -256,207 +284,27 @@
                 </div>
                 <div class="row pt-3">
                     <div class="col-6">
-                        <a href="index5.html" type="button" class="btn white-btn w-100 f-24 rad16 py-3">Regresar</a>                        
+                        <button type="button" class="btn white-btn w-100 f-24 rad16 py-3">Regresar</button>                        
                     </div>
                     <div class="col-6">
-                        <a href="index7.html" type="button" class="btn gray1-btn w-100 f-24 rad16 py-3">Pagar</a>
+                        <a href="index7.html" type="button" class="btn gray1-btn w-100 f-24 rad16 py-3">Registrar pasajeros</a>
                     </div>
                 </div>
             </div>
         </footer>
-        
-        
-        <!-- Modal Asistencia Total -->
-        <div class="modal fade modal-bottom" id="modalAsistencia" tabindex="-1" aria-labelledby="modalAsistenciaLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content p-5 rounded-lg">
-                    <div class="modal-header justify-content-center">
-                        <h5 class="f-40 fw-700" id="modalAsistenciaLabel">¿Qué es asistencia total?</h5>
-                    </div>
-                    
-                    <div class="modal-body pt-5">
-                        <p class="f-24">
-                            Es un servicio adicional en la compra de tu boleto, es completamente opcional y puedes adquirirla tanto en la taquilla como en nuestros canales digitales (página WEB y ADO Móvil). Aplica para todos los servicios directos.
-                        </p>
-                        <p class="f-24">
-                            Con este servicio puedes obtener asistencia médica, legal, funeraria, red de descuentos y otros servicios que puedas requerir. Estos beneficios tienen una cobertura de acuerdo a la vigencia que adquieras, la vigencia inicia una vez que llegaste a tu destino.
-                        </p>
-                        <p class="f-24">
-                            El cupón color azul es de 7 días y el cupón color negro es de 24 horas. Para mayor información ingresa a <a href="https://asistenciatotal.app/index.html" target="_blank" class="fpurple">asistenciatotal.app</a> o comunícate al <a href="tel:8000300236" target="_blank" class="fpurple">800 0300 236</a>.
-                        </p>
-                        <p class="f-24">
-                            Para hacer válido tu seguro de Asistencia Total debes conservar el boleto de tu viaje, ya que te lo solicitarán cuando te comuniques.
-                            Los servicios sólo son aplicables al haber descendido del autobús en la terminal de la ciudad destino marcada en tu boleto.
-                        </p>
-                    </div>
-                                        
-                    <div class="modal-footer border-0">
-                        <button type="button" class="btn purple-btn w-100 py-4 f-24 shadow-none" data-dismiss="modal">Aceptar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        
-        <!-- Modal Total Boletos -->
-        <div class="modal fade modal-bottom" id="ModalTotal" tabindex="-1" aria-labelledby="ModalTotalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content p-5 rounded-lg">
-                    <div class="modal-header justify-content-center">
-                        <h5 class="f-40 fw-700" id="ModalTotalLabel">Resumen de compra</h5>
-                    </div>
-                    
-                    <div class="modal-body pt-5">
-                        <div class="row whiteback shadow p-4 rad16">
-                            <div class="col-12">
-                                <div class="row rounded-lg whiteback" style="border-bottom: 3px solid #FAFAFA;">
-                                    <div class="col-12">
-                                        <div class="row pt-2 pb-4">
-                                            <div class="col-6">
-                                                <h5 class="f-24 txt-start fw-700 p-0 m-0">Viaje de regreso</h5>
-                                            </div>
-                                            <div class="col-6 text-end">
-                                                <h5 class="f-24 txt-start fw-700 p-0 m-0">Jueves 26 de marzo</h5>
-                                            </div>
-                                        </div>                                                                                
-                                    </div>
-                                </div>
-                                
-                                <div class="row whiteback py-4 corridasBox-top">
-                                    <div class="col-2 d-flex align-items-center justify-content-center">
-                                        <img src="assets/images/ADO.svg" alt="" class="img-fluid">
-                                    </div>
-                                    <div class="col-10 border-lx">
-                                        <div class="row">
-                                            <div class="col-12 d-flex align-items-center justify-content-between">
-                                                <p class="f-20 fw-700 m-0 p-0">06:00 h</p>
-                                                <p class="f-12 fdark1 m-0 p-0">3h 10min. aprox. </p>
-                                                <p class="f-20 fw-700 m-0 p-0">08:10 h</p>
-                                            </div>
-                                            <div class="col-12 d-flex align-items-center justify-content-between">
-                                                <p class="f-12 fw-500 pb-0 mb-0">Central México norte, CDMX</p>
-                                                <p class="f-12 fw-500 pb-0 mb-0">Apan, Hgo.</p>
-                                            </div>
-                                        </div>
-                                    </div>              
-                                </div><!-- /row corridas -->  
-                                
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="row my-3">
-                                            <div class="col-8"><span class="fw-400 f-24">1 Adulto</span></div>
-                                            <div class="col-4 text-end"><span class="fw-700 f-24">$400.00 MXN</span></div>
-                                        </div>
-                                        <div class="row my-3">
-                                            <div class="col-8"><span class="fw-400 f-24">1 niño</span></div>
-                                            <div class="col-4 text-end"><span class="fw-700 f-24">$250.00 MXN</span></div>
-                                        </div>
-                                        <div class="row my-3">
-                                            <div class="col-8"><span class="fw-400 f-24">1 INAPAM</span></div>
-                                            <div class="col-4 text-end"><span class="fw-700 f-24">$250.00 MXN</span></div>
-                                        </div>
-                                        <div class="row my-3">
-                                            <div class="col-8"><span class="fw-400 f-24">3 Adultos</span></div>
-                                            <div class="col-4 text-end"><span class="fw-700 f-24">$45.00 MXN</span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- row -->   
-                        
-                        <div class="row whiteback shadow p-4 rad16 mt-4">
-                            <div class="col-12">
-                                <div class="row rounded-lg whiteback" style="border-bottom: 3px solid #FAFAFA;">
-                                    <div class="col-12">
-                                        <div class="row pt-2 pb-4">
-                                            <div class="col-6">
-                                                <h5 class="f-24 txt-start fw-700 p-0 m-0">Viaje de regreso</h5>
-                                            </div>
-                                            <div class="col-6 text-end">
-                                                <h5 class="f-24 txt-start fw-700 p-0 m-0">Jueves 26 de marzo</h5>
-                                            </div>
-                                        </div>                                                                                
-                                    </div>
-                                </div>
-                                
-                                <div class="row whiteback py-4 corridasBox-top">
-                                    <div class="col-2 d-flex align-items-center justify-content-center">
-                                        <img src="assets/images/iconos-logos/logo-au.png" alt="" class="img-fluid">
-                                    </div>
-                                    <div class="col-10 border-lx">
-                                        <div class="row">
-                                            <div class="col-12 d-flex align-items-center justify-content-between">
-                                                <p class="f-20 fw-700 m-0 p-0">06:00 h</p>
-                                                <p class="f-12 fdark1 m-0 p-0">3h 10min. aprox. </p>
-                                                <p class="f-20 fw-700 m-0 p-0">08:10 h</p>
-                                            </div>
-                                            <div class="col-12 d-flex align-items-center justify-content-between">
-                                                <p class="f-12 fw-500 pb-0 mb-0">Central México norte, CDMX</p>
-                                                <p class="f-12 fw-500 pb-0 mb-0">Apan, Hgo.</p>
-                                            </div>
-                                        </div>
-                                    </div>              
-                                </div><!-- /row corridas -->  
-                                
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="row my-3">
-                                            <div class="col-8"><span class="fw-400 f-24">1 Adulto</span></div>
-                                            <div class="col-4 text-end"><span class="fw-700 f-24">$400.00 MXN</span></div>
-                                        </div>
-                                        <div class="row my-3">
-                                            <div class="col-8"><span class="fw-400 f-24">1 niño</span></div>
-                                            <div class="col-4 text-end"><span class="fw-700 f-24">$250.00 MXN</span></div>
-                                        </div>
-                                        <div class="row my-3">
-                                            <div class="col-8"><span class="fw-400 f-24">1 INAPAM</span></div>
-                                            <div class="col-4 text-end"><span class="fw-700 f-24">$250.00 MXN</span></div>
-                                        </div>
-                                        <div class="row my-3">
-                                            <div class="col-8"><span class="fw-400 f-24">3 Adultos</span></div>
-                                            <div class="col-4 text-end"><span class="fw-700 f-24">$45.00 MXN</span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- row --> 
-                        
-                        <div class="row whiteback shadow p-4 rad16 mt-4">
-                            <div class="col-12">                                
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="row my-3">
-                                            <div class="col-8"><span class="fw-400 f-24">Subtotal</span></div>
-                                            <div class="col-4 text-end"><span class="fw-700 f-24">$2,490.00 MXN</span></div>
-                                        </div>
-                                        <div class="row my-3">
-                                            <div class="col-8"><span class="fw-400 f-24">IVA</span></div>
-                                            <div class="col-4 text-end"><span class="fw-700 f-24">$384.00 MXN</span></div>
-                                        </div>
-                                        <div class="row green-div2 py-2 mt-3 px-3" data-bs-toggle="modal" data-bs-target="#ModalTotal" style="cursor: pointer;">
-                                            <div class="col">
-                                                <span class="fblack f-28 fw-700">Total</span>
-                                                <span class="fblack f-14 fw-400">(Incluye IVA)</span>
-                                            </div>
-                                            <div class="col text-end">
-                                                <span class="f-green1 f-28 fw-700">$2,478.00 MXN</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- row --> 
-                    </div>
-                                        
-                    <div class="modal-footer border-0">
-                        <button type="button" class="btn purple-btn w-100 py-4 f-24 shadow-none" data-bs-dismiss="modal">Aceptar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         
         <script src="assets/js/jquery-4.0.0.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
+        <script>
+            // Autoplay del audio al abrir el sitio
+            document.body.addEventListener('click', function() {
+                const audio = document.getElementById('asientos-ida');
+                audio.play();
+                }, 
+            { 
+                once: true 
+            });
+        </script>
     </body>
 </html>

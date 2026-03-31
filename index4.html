@@ -14,16 +14,233 @@
         <title>Document</title>
     </head>
     
-    <body style="background-color: #26282F; height: 100vh;" class="d-flex align-items-center justify-content-center flex-column">
-        <div class="container-fluid">
+    <body>
+        <audio src="assets/audios/autobus-regreso.mp3" autoplay id="autobus-regreso"></audio>
+        
+        <section class="container-lg px-5" style="background-color: #F1F3F9;">
+            <div class="row pt-4 pb-3">
+                <div class="col-6">
+                    <button class="btn fa-btn py-2 px-3 f-24 shadow-none d-flex align-items-center justify-content-center" data-bs-dismiss="modal">
+                        <iconify-icon icon="ant-design:left-outlined"></iconify-icon> Editar búsqueda
+                    </button>                        
+                </div>
+                <div class="col-6 d-flex align-items-center justify-content-end">
+                    <p class="fw-700 f24 p-0 m-0">23 de marzo 6:31h</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="container-lg whiteback">
             <div class="row">
-                <div class="col-12 text-center">
-                    <a href="index5.html">
-                        <img src="assets/images/iconos-logos/ado-loader.svg" alt="">
-                        <p class="f-white f-32 fw-700">
-                            Cargando asientos
-                        </p>
-                    </a>
+                <div class="col-12 px-0">
+                    <ul class="nav nav-tabs nav-fill nav-corridas border-0" id="myTab" role="tablist">
+                        <li class="nav-item border-0" role="presentation">
+                            <button class="nav-link border-0 d-flex align-items-center justify-content-center active" id="boletos-tab" data-bs-toggle="tab" data-bs-target="#boletos-tab-pane" type="button" role="tab" aria-controls="boletos-tab-pane" aria-selected="true">
+                                <img src="assets/images/iconos-logos/boletos-off.png" alt="" class="boletos-off me-2">
+                                <img src="assets/images/iconos-logos/boletos-on.svg" alt="" class="boletos-on d-none me-2">
+                                Elegir boletos
+                            </button>
+                        </li>
+                        <li class="nav-item border-0" role="presentation">
+                            <button class="nav-link border-0 d-flex align-items-center justify-content-center" id="asientos-tab" data-bs-toggle="tab" data-bs-target="#asientos-tab-pane" type="button" role="tab" aria-controls="asientos-tab-pane" aria-selected="false">
+                                <img src="assets/images/iconos-logos/asientos-off.svg" alt="" class="asientos-off me-2"> 
+                                <img src="assets/images/iconos-logos/asientos-on.svg" alt="" class="asientos-on d-none me-2">
+                                Asientos
+                            </button>
+                        </li>
+                        <li class="nav-item border-0" role="presentation">
+                            <button class="nav-link border-0 d-flex align-items-center justify-content-center" id="registro-tab" data-bs-toggle="tab" data-bs-target="#registro-tab-pane" type="button" role="tab" aria-controls="registro-tab-pane" aria-selected="false">
+                                <img src="assets/images/iconos-logos/registro-off.svg" alt="" class="registro-off me-2"> 
+                                <img src="assets/images/iconos-logos/registro-on.svg" alt="" class="registro-on d-none me-2">
+                                Registro
+                            </button>
+                        </li>
+                        <li class="nav-item border-0" role="presentation">
+                            <button class="nav-link border-0 d-flex align-items-center justify-content-center" id="pago-tab" data-bs-toggle="tab" data-bs-target="#pago-tab-pane" type="button" role="tab" aria-controls="pago-tab-pane" aria-selected="false">
+                                <img src="assets/images/iconos-logos/pago-off.svg" alt="" class="pago-off me-2">
+                                <img src="assets/images/iconos-logos/pago-on.svg" alt="" class="pago-on d-none me-2">
+                                Pago
+                            </button>
+                        </li>
+                    </ul>
+                    
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="boletos-tab-pane" role="tabpanel" aria-labelledby="boletos-tab" tabindex="0">
+                            &nbsp;
+                        </div><!-- boletos-pane -->
+                        
+                        <div class="tab-pane fade" id="asientos-tab-pane" role="tabpanel" aria-labelledby="asientos-tab" tabindex="0">
+                            &nbsp;
+                        </div><!-- asientos-pane -->
+                        
+                        <div class="tab-pane fade" id="registro-tab-pane" role="tabpanel" aria-labelledby="registro-tab" tabindex="0">
+                            &nbsp;
+                        </div><!-- registro-pane -->
+                        
+                        <div class="tab-pane fade" id="pago-tab-pane" role="tabpanel" aria-labelledby="pago-tab" tabindex="0">
+                            &nbsp;
+                        </div><!-- pago-pane -->
+                    </div>
+                </div>                
+            </div>
+            
+            <div class="row green-div1 py-4 px-3">
+                <div class="col">
+                    <span class="fblack f-28 fw-700">Elige tu boleto de ida</span>
+                </div>
+                <div class="col text-end">
+                    <span class="f-purple f-28 fw-700">Lunes 23 de marzo 6:30h</span>
+                </div>
+            </div>
+            
+            <!-- Corridas -->
+            <div class="row">
+                <div class="col-12" id="corridas">
+                    <!-- 
+                        Aquí se pintan las corridas N veces (mediante la función javascript de abajo) para evitar repetir el bloque HTML,
+                        si se quiere quitar la función y pintar el HTML de forma normal, basta con traer aquí el código dentro de la variable bloqueHTML
+                    -->
+                </div>
+            </div>
+        </section>
+        
+        
+        <!-- Modal más información -->
+        <div class="modal fade modal-bottom" id="modalInfo" tabindex="-1" aria-labelledby="modalInfoLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content py-4 px-4">
+                    <div class="modal-header justify-content-start">                       
+                        <div class="row mt-4 w-100">
+                            <div class="col-12 d-flex align-items-center justify-content-between">
+                                <h5 class="text-left f-32 fblack" id="modalInfoLabel">Más Información</h5>      
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row my-3">
+                                <div class="col-12">
+                                    <div class="green-div2 d-flex align-items-start shadow p-3">
+                                        <img src="assets/images/iconos-logos/info.png" class="" alt="">
+                                        <div class="ps-2">
+                                            <h4 class="f-18 m-0 p-0 f-green2 fw-700">Tiempo aproximado 5 h 10 min.</h4>
+                                            <p class="f-16 fblack m-0 p-0">
+                                                La duración del viaje puede variar según las condiciones climáticas o de tránsito.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>            
+                            </div>
+                            
+                            <div class="row" style="margin-top: 100px;">
+                                <div class="col-12">
+                                    <h5 class="f-18 f-700 fblack">Amenidades</h5>
+                                    <hr class="separador shadow">
+                                </div>
+                                <div class="col-6">
+                                    <ul>
+                                        <li class="d-flex align-items-center justify-content-start mb-4">
+                                            <img src="assets/images/iconos-logos/aire-acondicionado.svg" alt="" class="me-3" style="width: 40px;"> 
+                                            <p class="f-16 mb-0 pb-0" style="line-height: 18px; font-weight: 500;">
+                                                Aire<br>acondicionado
+                                            </p>
+                                        </li>
+                                        <li class="d-flex align-items-center justify-content-start mb-4">
+                                            <img src="assets/images/iconos-logos/pantallas.svg" alt="" class="me-3" style="width: 40px;"> 
+                                            <p class="f-16 mb-0 pb-0" style="line-height: 18px; font-weight: 500;">
+                                                Pantallas HD
+                                            </p>
+                                        </li>
+                                        <li class="d-flex align-items-center justify-content-start mb-4">
+                                            <img src="assets/images/iconos-logos/asientos.svg" alt="" class="me-3" style="width: 40px;"> 
+                                            <p class="f-16 mb-0 pb-0" style="line-height: 18px; font-weight: 500;">
+                                                Asientos<br>reclinables
+                                            </p>
+                                        </li>
+                                        <li class="d-flex align-items-center justify-content-start">
+                                            <img src="assets/images/iconos-logos/wifi.svg" alt="" class="me-3" style="width: 40px;"> 
+                                            <p class="f-16 mb-0 pb-0" style="line-height: 18px; font-weight: 500;">
+                                                WIFI
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-6">
+                                    <ul class="list-noicon">
+                                        <li class="d-flex align-items-center justify-content-start mb-4">
+                                            <img src="assets/images/iconos-logos/equipaje.svg" alt="" class="me-3" style="width: 40px;"> 
+                                            <p class="f-16 mb-0 pb-0" style="line-height: 18px; font-weight: 500;">
+                                                Hasta 25kg de<br>equipaje <br>
+                                                <small style="font-size: 70%;">Sin costo</small>
+                                            </p>
+                                        </li>
+                                        <li class="d-flex align-items-center justify-content-start mb-4">
+                                            <img src="assets/images/iconos-logos/conexiones.svg" alt="" class="me-3" style="width: 40px;"> 
+                                            <p class="f-16 mb-0 pb-0" style="line-height: 18px; font-weight: 500;">
+                                                Conexiones<br>eléctricas
+                                            </p>
+                                        </li>
+                                        <li class="d-flex align-items-center justify-content-start">
+                                            <img src="assets/images/iconos-logos/sanitarios.svg" alt="" class="me-3" style="width: 40px;"> 
+                                            <p class="f-16 mb-0 pb-0" style="line-height: 18px; font-weight: 500;">
+                                                Sanitarios
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-footer py-3" style="background-color: #F1F3F9;">
+                        <div class="container-fluid">                            
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="index2.html" type="button" class="btn purple-btn w-100 f-24 rad16 py-3" data-bs-dismiss="modal">Aceptar</a>                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- Modal Listo -->
+        <div class="modal fade" id="modalListo" tabindex="-1" aria-labelledby="modalListoLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content py-4 px-4">
+                    <div class="modal-header justify-content-start">                       
+                        <div class="row mt-4 w-100">
+                            <div class="col-12 d-flex align-items-center justify-content-between">
+                                <h5 class="text-center fw-700 f-32 fblack" id="modalListoLabel">Listo</h5>      
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row my-3">
+                                <div class="col-12">
+                                    <p class="p-0 m-0 f-20 text-center">
+                                        Ahora elige tu viaje de regreso.
+                                    </p>
+                                </div>            
+                            </div>                                                      
+                        </div>
+                    </div>
+                    
+                    <div class="modal-footer py-3" style="background-color: #F1F3F9;">
+                        <div class="container-fluid">                            
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="index5.html" type="button" class="btn purple-btn w-100 f-24 rad16 py-3">Continuar</a>                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -31,5 +248,124 @@
         
         <script src="assets/js/jquery-4.0.0.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
+        <script>
+            // Autoplay del audio al abrir el sitio
+            document.body.addEventListener('click', function() {
+                const audio = document.getElementById('autobus-regreso');
+                audio.play();
+                }, 
+            { 
+                once: true 
+            });
+            
+            
+            
+            const corridas = document.getElementById('corridas');
+            const bloqueHTML = `
+                <div class="container-lg">
+                    <div class="row shadow whiteback mt-4 pt-3 pb-4 corridasBox-top">
+                        <div class="col-2 d-flex align-items-center justify-content-center">
+                            <img src="assets/images/ADO.svg" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-6 d-flex align-items-start justify-content-between borders-x">
+                            <div class="row">
+                                <div class="col-12 d-flex align-items-center justify-content-between">
+                                    <p class="f-20 fw-700 m-0 p-0">06:00 h</p>
+                                    <p class="f-12 fdark1 m-0 p-0">3h 10min. aprox. </p>
+                                    <p class="f-20 fw-700 m-0 p-0">08:10 h</p>
+                                </div>
+                                <div class="col-12 d-flex align-items-center justify-content-between">
+                                    <p class="f-12 fw-500 pb-0 mb-0">Central México norte, CDMX</p>
+                                    <p class="f-12 fw-500 pb-0 mb-0">Apan, Hgo.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 px-2 d-flex align-items-center justify-content-around">
+                            <div>
+                                <p class="f-14 f-red text-end mb-0 pb-0">                                    
+                                    $1,800.00 MXN
+                                </p>
+                                <p class="f-18 fw-700 text-end mb-0 pb-0">$1,500.00MXN</p>
+                            </div>
+                            
+                            <a href="" class="btn purple-btn btn-corridas-selec shadow-none ms-2 rad16" data-bs-toggle="modal" data-bs-target="#modalListo">Seleccionar</a>
+                        </div>               
+                    </div><!-- /row corridas -->
+                    
+                    <div class="row shadow corridasBox-bottom py-2" style="background-color: #ECEFF6;">
+                        <div class="col-8 d-flex align-items-center justify-content-end">
+                            <ul class="d-flex align-items-center justify-content-center p-0 m-0  list-borders1">
+                                <li class="me-2 pe-2">
+                                    <span class="f-14 fw-500">Servicio primera clase</span>
+                                </li>
+                                <li>
+                                    <span class="f-14 fw-500">Quedan 30 asientos</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-4 d-flex align-items-center justify-content-end">
+                            <a href="#" class="btn purple-link d-flex align-items-center f-14 fw-500" data-bs-toggle="modal" data-bs-target="#modalInfo">
+                                <span class="me-2">Ver más Información</span>
+                            </a>
+                        </div>
+                    </div>    
+                </div>
+                
+                
+                <div class="container-lg">
+                    <div class="row shadow whiteback mt-4 pt-3 pb-4 corridasBox-top">
+                        <div class="col-2 d-flex align-items-center justify-content-center">
+                            <img src="assets/images/iconos-logos/logo-au.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-6 d-flex align-items-start justify-content-between borders-x">
+                            <div class="row">
+                                <div class="col-12 d-flex align-items-center justify-content-between">
+                                    <p class="f-20 fw-700 m-0 p-0">06:00 h</p>
+                                    <p class="f-12 fdark1 m-0 p-0">3h 10min. aprox. </p>
+                                    <p class="f-20 fw-700 m-0 p-0">08:10 h</p>
+                                </div>
+                                <div class="col-12 d-flex align-items-center justify-content-between">
+                                    <p class="f-12 fw-500 pb-0 mb-0">Central México norte, CDMX</p>
+                                    <p class="f-12 fw-500 pb-0 mb-0">Apan, Hgo.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 px-2 d-flex align-items-center justify-content-around">
+                            <div>
+                                <p class="f-14 f-red text-end mb-0 pb-0">                                    
+                                    $1,800.00 MXN
+                                </p>
+                                <p class="f-18 fw-700 text-end mb-0 pb-0">$1,500.00MXN</p>
+                            </div>
+                            
+                            <a href="" class="btn purple-btn btn-corridas-selec shadow-none ms-2 rad16" data-bs-toggle="modal" data-bs-target="#modalListo">Seleccionar</a>
+                        </div>               
+                    </div><!-- /row corridas -->
+                    
+                    <div class="row shadow corridasBox-bottom py-2" style="background-color: #ECEFF6;">
+                        <div class="col-8 d-flex align-items-center justify-content-end">
+                            <ul class="d-flex align-items-center justify-content-center p-0 m-0  list-borders1">
+                                <li class="me-2 pe-2">
+                                    <span class="f-14 fw-500">Servicio primera clase</span>
+                                </li>
+                                <li>
+                                    <span class="f-14 fw-500">Quedan 30 asientos</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-4 d-flex align-items-center justify-content-end">
+                            <a href="#" class="btn purple-link d-flex align-items-center f-14 fw-500" data-bs-toggle="modal" data-bs-target="#modalInfo">
+                                <span class="me-2">Ver más Información</span>
+                            </a>
+                        </div>
+                    </div>    
+                </div>
+            `;
+
+            
+            for (let i = 0; i < 4; i++) {
+                corridas.innerHTML += bloqueHTML; 
+            }
+        </script>
     </body>
 </html>

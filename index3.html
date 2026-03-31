@@ -15,6 +15,8 @@
     </head>
     
     <body>
+        <audio src="assets/audios/autobus-ida.mp3" autoplay id="autobus-ida"></audio>
+        
         <section class="container-lg px-5" style="background-color: #F1F3F9;">
             <div class="row pt-4 pb-3">
                 <div class="col-6">
@@ -247,6 +249,17 @@
         <script src="assets/js/jquery-4.0.0.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
         <script>
+            // Autoplay del audio al abrir el sitio
+            document.body.addEventListener('click', function() {
+                const audio = document.getElementById('autobus-ida');
+                audio.play();
+                }, 
+            { 
+                once: true 
+            });
+            
+            
+            
             const corridas = document.getElementById('corridas');
             const bloqueHTML = `
                 <div class="container-lg">

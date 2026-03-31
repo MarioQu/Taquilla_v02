@@ -17,6 +17,8 @@
     <body>
         <div class="back-red"></div>
         
+        <audio src="assets/audios/Bienvenido.mp3" autoplay id="audio-bienvenida"></audio>
+        
         <section class="container-lg px-5">
             <div class="row mt-3 mb-3">                
                 <div class="col-5">
@@ -58,22 +60,22 @@
                             <div class="row mt-4">
                                 <div class="col">
                                     <label for="origen" class="form-label mb-1 f-18">Origen</label>
-                                    <input type="text" class="form-control" id="origen" placeholder="México, Tapo, CDMX" data-bs-toggle="modal" data-bs-target="#modal-origen">
+                                    <input type="text" class="form-control audio-field" id="origen" placeholder="México, Tapo, CDMX" data-bs-toggle="modal" data-bs-target="#modal-origen" data-audio="assets/audios/de-donde-sales.mp3">
                                 </div>
                                 <div class="col">
                                     <label for="destino" class="form-label mb-1 f-18">Destino</label>
-                                    <input type="text" class="form-control" id="destino" placeholder="¿A dónde vas?" data-bs-toggle="modal" data-bs-target="#modal-destino">
-                                </div>
+                                    <input type="text" class="form-control audio-field" id="destino" placeholder="¿A dónde vas?" data-bs-toggle="modal" data-bs-target="#modal-destino" data-audio="assets/audios/a-donde-vas.mp3">
+                                </div>                                
                             </div><!-- row -->
                             
                             <div class="row mt-4">
                                 <div class="col">
                                     <label for="ida" class="form-label f-18 mb-1">Fecha de ida</label>
-                                    <input type="text" class="form-control" id="ida" placeholder="Lun. 23 de marzo" data-bs-toggle="modal" data-bs-target="#modal-fechas">
+                                    <input type="text" class="form-control audio-field" id="ida" placeholder="Lun. 23 de marzo" data-bs-toggle="modal" data-bs-target="#modal-fechas" data-audio="assets/audios/fecha-ida.mp3">
                                 </div>
                                 <div class="col">
                                     <label for="regreso" class="form-label f-18 mb-1">Fecha de regreso</label>
-                                    <input type="text" class="form-control" id="regreso" placeholder="¿Cuándo regresas?" data-bs-toggle="modal" data-bs-target="#modal-fechas">
+                                    <input type="text" class="form-control audio-field" id="regreso" placeholder="¿Cuándo regresas?" data-bs-toggle="modal" data-bs-target="#modal-fechas" data-audio="assets/audios/fecha-regreso.mp3">
                                 </div>
                                 <div class="col">
                                     <label for="pasajeros" class="form-label f-18 mb-1">Pasajeros</label>
@@ -83,7 +85,8 @@
                             
                             <div class="row mt-4">
                                 <div class="col">
-                                    <a href="index2.html" class="btn gray1-btn f-24 w-100 rad16 py-3">Buscar viajes</a>
+                                    <a href="index2.html" class="btn gray1-btn f-24 w-100 rad16 py-3" id="ComenzarCompra">Buscar viajes</a>
+                                    <audio src="assets/audios/comencemos-compra.mp3" id="AudioComenzarCompra"></audio>
                                 </div>
                             </div><!-- row -->
                         </form>
@@ -818,7 +821,7 @@
         <div class="modal fade modalFull" id="modal-fechas" tabindex="-1" aria-labelledby="modal-fechasLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content h-100 norad">
-                    <div class="modal-header norad d-flex align-items-center justify-content-between-0 p-4">
+                    <div class="modal-header norad d-flex align-items-center justify-content-between p-4">
                         <button class="btn white-btn btnRegresar1 py-1 px-3 f-24 shadow-none d-flex align-items-center justify-content-center" data-bs-dismiss="modal">
                             <iconify-icon icon="ant-design:left-outlined"></iconify-icon> Regresar
                         </button>
@@ -1004,7 +1007,7 @@
         </div>
         
         
-    
+        <audio id="GlobalAudioFields"></audio>
         <footer class="container-fluid p-0 fixed-bottom">
             <img src="assets/images/banner-home.svg" class="w-100" alt="">
         </footer> 
@@ -1012,6 +1015,49 @@
         <script src="assets/js/jquery-4.0.0.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
         <script>
+            // Autoplay del audio al abrir el sitio
+            document.body.addEventListener('click', function() {
+                const audio = document.getElementById('audio-bienvenida');
+                audio.play();
+                }, 
+            { 
+                once: true 
+            });
+            
+            // Función para reproducir los diversos audios correspondientes a cada input-field
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('audio-field')) {
+
+                    const audio = document.getElementById('GlobalAudioFields');
+                    const src = e.target.dataset.audio;
+
+                    if (!audio || !src) return;
+
+                    audio.pause();
+                    audio.currentTime = 0;
+
+                    audio.src = src;
+                    audio.play().catch(() => {});
+                }
+            });
+            
+            // Audio Botón Comencemos Compra
+            document.getElementById('ComenzarCompra').addEventListener('click', function(e) {
+                e.preventDefault(); 
+
+                const audio = document.getElementById('AudioComenzarCompra');
+                const url = this.href;
+
+                audio.play().then(() => {                    
+                    audio.onended = function() {
+                        window.location.href = url;
+                    };
+
+                }).catch(() => {                    
+                    window.location.href = url;
+                });
+            });
+
             /* ********** Lightpicker ********** */
             new Litepicker({
                 element: document.getElementById('calendario'),
