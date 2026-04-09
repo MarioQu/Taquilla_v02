@@ -12,6 +12,19 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css"/>
         <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
         <title>Document</title>
+        <style>
+            .form-check-filtro{
+                border: 1px solid #E3E7F2;
+                border-radius: 8px;
+            }.form-check-filtro:hover{
+                border: 1px solid #5F2167;
+            }.form-check-filtro label{
+                width: 100% !important;
+            }
+            .form-check .form-check-input {
+                margin-left: 0 !important;
+            }
+        </style>
     </head>
     
     <body>
@@ -84,12 +97,14 @@
                 </div>                
             </div>
             
-            <div class="row green-div1 py-4 px-3">
-                <div class="col">
-                    <span class="fblack f-28 fw-700">Elige tu boleto de ida</span>
+            <div class="row green-div1 py-4 px-3 d-flex align-items-center justify-content-between">
+                <div class="col-10">
+                    <p class="m-0 p-0 fblack f-24 fw-700">Elige tu boleto de ida <span class="f-purple">Lunes 23 de marzo 6:30h</span></p>
                 </div>
                 <div class="col text-end">
-                    <span class="f-purple f-28 fw-700">Lunes 23 de marzo 6:30h</span>
+                    <button class="btn white-btn" data-bs-toggle="modal" data-bs-target="#ModalFiltro">
+                        <img src="assets/images/iconos-logos/filtro.svg" alt=""> Filtrar
+                    </button>
                 </div>
             </div>
             
@@ -237,6 +252,55 @@
                             <div class="row">
                                 <div class="col-12">
                                     <a href="index4.html" type="button" class="btn purple-btn w-100 f-24 rad16 py-3">Continuar</a>                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal Filtro -->
+        <div class="modal modal-bottom fade" id="ModalFiltro" tabindex="-1" aria-labelledby="ModalFiltroLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content rad20">
+                    <div class="modal-header justify-content-start">                       
+                        <div class="row mt-4 w-100 px-4">
+                            <div class="col-12 d-flex align-items-center justify-content-between">
+                                <h5 class="text-left f-32 fw-700" id="modalInfoLabel">Filtra por marca</h5>      
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-body pt-5 px-4" style="margin-bottom: 150px;">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="form-check form-check-filtro p-3">                                        
+                                        <label class="form-check-label" for="ADO">
+                                            <input class="form-check-input" type="checkbox" value="" id="ADO">
+                                            <img src="assets/images/ADO.svg" alt="">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-check form-check-filtro p-3">                                        
+                                        <label class="form-check-label" for="AU">
+                                            <input class="form-check-input" type="checkbox" value="" id="AU" checked>
+                                            <img src="assets/images/iconos-logos/logo-au.png" alt="">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        
+                    <div class="modal-footer py-3" style="background-color: #F1F3F9;">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12 pt-3">
+                                    <button type="button" class="btn purple-btn w-100 f-24 rad16 py-3" data-bs-dismiss="modal">Filtrar</button>
                                 </div>
                             </div>
                         </div>
