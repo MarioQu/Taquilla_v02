@@ -32,6 +32,14 @@
             </div>
         </section>
         
+        <!-- Borrar -->
+        <div>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAlertInapam">Alert 1</button>
+            
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAsientosOcupados">Alert 2</button>
+        </div>
+        <!-- Borrar -->
+        
         <section class="container-lg whiteback">
             <div class="row">
                 <div class="col-12 px-0 mt-3">
@@ -129,7 +137,7 @@
                                     </div><!-- main col-12 -->
                                     
                                     <div class="col-12 shadow mt-5 pt-2" style="position: relative;">
-                                        <div style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; width: 100%; height: 100%; z-index: 9999; background-color: rgba(255, 255, 255, .7);"></div>
+                                        <div style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; width: 100%; height: 100%; z-index: 100; background-color: rgba(255, 255, 255, .7);"></div>
                                         
                                         <div class="row whiteback pb-4 corridasBox-top">
                                             <div class="col-2 d-flex align-items-center justify-content-center">
@@ -191,7 +199,7 @@
                                     </div><!-- main col-12 -->
                                     
                                     <div class="col-12 shadow mt-5 pt-2" style="position: relative;">
-                                        <div style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; width: 100%; height: 100%; z-index: 9999; background-color: rgba(255, 255, 255, .7);"></div>
+                                        <div style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; width: 100%; height: 100%; z-index: 100; background-color: rgba(255, 255, 255, .7);"></div>
                                         
                                         <div class="row whiteback pb-4 corridasBox-top">
                                             <div class="col-2 d-flex align-items-center justify-content-center">
@@ -292,6 +300,68 @@
                 </div>
             </div>
         </footer>
+        
+        
+        <!-- Modal INAMAP Alert -->
+        <div class="modal fade" id="modalAlertInapam" tabindex="-1" aria-labelledby="modalAlertInapamLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content rad20">
+                    <div class="modal-header justify-content-center align-items-center flex-column">
+                        <img src="assets/images/iconos-logos/alert.svg" alt="" class="mb-3">
+                        <h5 class="f-40 fw-700 text-center" id="modalAlertInapamLabel">Importante</h5>
+                    </div>
+                    
+                    <div class="modal-body pt-5">
+                        <p class="f-24 text-center p-3">
+                            Los asientos con tarifa <b>INAPAM o de niño ya no están disponibles para tu autobús de ida.</b> 
+                            Si lo deseas, puedes continuar con la compra con tarifa de adulto.
+                        </p>
+                    </div>
+                                        
+                    <div class="modal-footer py-3" style="background-color: #F1F3F9;">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12 pt-3">
+                                    <button type="button" class="btn purple-btn w-100 f-24 rad16 py-3" data-bs-dismiss="modal">Cambiar Viaje de ida</button>
+                                </div>
+                                <div class="col-12 pt-3">
+                                    <a href="index7.html" type="button" class="btn purple-btn w-100 f-24 rad16 py-3" data-bs-dismiss="modal">Continuar con tarifa de adulto</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal Asientos Ocupados -->
+        <div class="modal fade" id="modalAsientosOcupados" tabindex="-1" aria-labelledby="modalAsientosOcupadosLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content rad20">
+                    <div class="modal-header justify-content-center align-items-center flex-column">
+                        <img src="assets/images/iconos-logos/alert.svg" alt="" class="mb-3">
+                        <h5 class="f-40 fw-700 text-center" id="modalAsientosOcupadosLabel">Asientos Ocupados</h5>
+                    </div>
+                    
+                    <div class="modal-body pt-5">
+                        <p class="f-24 text-center p-3">
+                            Los asientos que elegiste para tu <b>viaje de Ida ya fueron ocupados.</b> 
+                            Selecciona otros asientos para poder continuar.
+                        </p>
+                    </div>
+                                        
+                    <div class="modal-footer py-3" style="background-color: #F1F3F9;">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12 pt-3">
+                                    <button type="button" class="btn purple-btn w-100 f-24 rad16 py-3" data-bs-dismiss="modal">Aceptar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         
         <script src="assets/js/jquery-4.0.0.min.js"></script>
