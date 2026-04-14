@@ -71,16 +71,34 @@
                                             <div class="col-12">
                                                 <h5 class="fw-600 f-24">Enviar boleto(s) a</h5>
                                             </div>
+                                            
+                                            <div class="col-12">
+                                                <div class="alert alert-warning rad20 text-center py-2" role="alert" style="background-color: #FFF1DB; border: 1px solid #D1820B;">
+                                                    <img src="assets/images/alert.svg" alt=""> Es necesario un correo electrónico para el envío de tus boletos.
+                                                </div>  
+                                            </div>
+                                            
                                             <div class="col-12 mt-3 faback shadow rad16">
                                                 <form action="" class="">
                                                     <div class="row px-3 py-4">                                        
                                                         <div class="col-6">
-                                                            <label for="email" class="txt16 mb-1 f500">Correo electrónico o celular</label>
-                                                            <input type="email" class="form-control fblack txt18 shadow-none audio-field" id="email" placeholder="Ej: mario@correo.com ó 5512234556" data-audio="assets/audios/ingresa-correo.mp3">
+                                                            <label for="email" class="txt16 mb-1 f500">Número de celular o correo electrónico</label>
+                                                            <input type="text" class="form-control fblack txt18 shadow-none audio-field is-valid" id="email" value="300 123 4567" data-audio="assets/audios/ingresa-correo.mp3">
                                                         </div>
                                                         <div class="col-6">
-                                                            <label for="email" class="txt16 mb-1 f500">Confirmar Correo electrónico o celular</label>
-                                                            <input type="email" class="form-control fblack txt18 shadow-none is-invalid" id="email" placeholder="Ej: mario@correo.com ó 5512234556">
+                                                            <label for="email" class="txt16 mb-1 f500">Confirmar número celular o correo</label>
+                                                            <input type="text" class="form-control fblack txt18 shadow-none is-valid" id="email" value="300 123 456">
+                                                            <div class="invalid-feedback">El correo no coincide</div>
+                                                        </div>                                                                    
+                                                    </div>
+                                                    <div class="row px-3 pb-4">                                        
+                                                        <div class="col-6">
+                                                            <label for="email" class="txt16 mb-1 f500">Correo electrónico</label>
+                                                            <input type="email" class="form-control fblack txt18 shadow-none audio-field is-valid" id="email" placeholder="Ej: nombre@gmail.com" data-audio="assets/audios/ingresa-correo.mp3">
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <label for="email" class="txt16 mb-1 f500">Confirmar correo electrónico</label>
+                                                            <input type="email" class="form-control fblack txt18 shadow-none is-invalid" id="email" placeholder="Ej: nombre@gmail.com">
                                                             <div class="invalid-feedback">El correo no coincide</div>
                                                         </div>                                                                    
                                                     </div>
